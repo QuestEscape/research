@@ -1,0 +1,114 @@
+diff --git a/extract_android_ota_payload.py b/extract_android_ota_payload.py
+index 7688ecd..6c0b593 100644
+--- a/extract_android_ota_payload.py
++++ b/extract_android_ota_payload.py
+@@ -1,5 +1,6 @@
+ #!/usr/bin/env python
+ 
++import argparse
+ import hashlib
+ import os
+ import os.path
+@@ -87,7 +88,7 @@ def decompress_payload(command, data, size, hash):
+     print("Hash mismatch")
+   return r
+ 
+-def parse_payload(payload_f, partition, out_f):
++def parse_payload(payload_f, partition, out_f, block_size, output_dir, source_dir):
+   BLOCK_SIZE = 4096
+   for operation in partition.operations:
+     e = operation.dst_extents[0]
+@@ -101,10 +102,57 @@ def parse_payload(payload_f, partition, out_f):
+     elif operation.type == update_metadata_pb2.InstallOperation.REPLACE_BZ:
+       r = decompress_payload('bzcat', data, e.num_blocks * BLOCK_SIZE, operation.data_sha256_hash)
+       out_f.write(r)
++    elif operation.type in [
++        update_metadata_pb2.InstallOperation.SOURCE_COPY,
++        update_metadata_pb2.InstallOperation.SOURCE_BSDIFF
++    ]:
++      src_blocks = []
++      for src_extent in operation.src_extents:
++        src_blocks.extend(range(src_extent.start_block, src_extent.start_block + src_extent.num_blocks))
++
++      dst_blocks = []
++      for dst_extent in operation.dst_extents:
++        dst_blocks.extend(range(dst_extent.start_block, dst_extent.start_block + dst_extent.num_blocks))
++
++      name = partition.partition_name + '.img'
++
++      if operation.type == update_metadata_pb2.InstallOperation.SOURCE_COPY:
++        with open(os.path.join(source_dir, name)) as in_f:
++          for src_block, dst_block in zip(src_blocks, dst_blocks):
++            in_f.seek(src_block * block_size)
++            out_f.seek(dst_block * block_size)
++            out_f.write(in_f.read(block_size))
++
++      elif operation.type == update_metadata_pb2.InstallOperation.SOURCE_BSDIFF:
++        src_data = bytearray()
++        with open(os.path.join(source_dir, name)) as in_f:
++          for src_block in src_blocks:
++            in_f.seek(src_block * block_size)
++            src_data.extend(in_f.read(block_size))
++
++        src = os.path.join(output_dir, name + '.src')
++        with open(src, 'wb') as src_f:
++          src_f.write(src_data)
++
++        patch = os.path.join(output_dir, name + '.patch')
++        with open(patch, 'wb') as patch_f:
++          patch_f.write(data)
++
++        dst = os.path.join(output_dir, name + '.dst')
++        subprocess.call(['bspatch', src, dst, patch])
++
++        with open(dst, 'rb') as dst_f:
++          for dst_block in dst_blocks:
++            out_f.seek(dst_block * block_size)
++            out_f.write(dst_f.read(block_size))
++
++        os.remove(src)
++        os.remove(patch)
++        os.remove(dst)
+     else:
+       raise PayloadError('Unhandled operation type (%d)' % operation.type)
+ 
+-def main(filename, output_dir):
++def main(filename, output_dir, source_dir):
+   if filename.endswith('.zip'):
+     print("Extracting 'payload.bin' from OTA file...")
+     ota_zf = zipfile.ZipFile(filename)
+@@ -121,25 +169,20 @@ def main(filename, output_dir):
+     fname = os.path.join(output_dir, name)
+     out_f = open(fname, 'w')
+     try:
+-      parse_payload(payload, p, out_f)
++      parse_payload(payload, p, out_f, payload.manifest.block_size, output_dir, source_dir)
+     except PayloadError as e:
+       print('Failed: %s' % e)
+       out_f.close()
+       os.unlink(fname)
+ 
+ if __name__ == '__main__':
+-  try:
+-    filename = sys.argv[1]
+-  except:
+-    print('Usage: %s payload.bin [output_dir]' % sys.argv[0])
+-    sys.exit()
++  parser = argparse.ArgumentParser()
++  parser.add_argument('filename')
++  parser.add_argument('-o', '--output_dir', default=os.getcwd())
++  parser.add_argument('-s', '--source_dir')
++  args = parser.parse_args()
+ 
+-  try:
+-    output_dir = sys.argv[2]
+-  except IndexError:
+-    output_dir = os.getcwd()
++  if not os.path.exists(args.output_dir):
++    os.makedirs(args.output_dir)
+ 
+-  if not os.path.exists(output_dir):
+-    os.makedirs(output_dir)
+-
+-  main(filename, output_dir)
++  main(args.filename, args.output_dir, args.source_dir)
