@@ -11,6 +11,7 @@ from enum import Enum
 
 from nacl.public import PrivateKey, PublicKey, Box
 from nacl.utils import random
+import hmac
 
 from IPython.terminal.embed import InteractiveShellEmbed
 
@@ -56,6 +57,12 @@ class Method(Enum):
     OCULUS_SET_USER_SECRET = 2003
     OTA_ENABLED_SET = 6007
     OTA_ENABLED_STATUS = 6008
+    OTA_MANUAL_UPDATE = 5003
+    SKIP_HIGH_PRI_APPS_DOWNLOAD = 14001
+    DISCOVER_CASTING_DEVICES  = 13001
+    START_CASTING = 13002
+    STOP_CASTING = 13003
+    CASTING_STATUS = 13004
     PING = 0
     PIN_LOCK = 4003
     PIN_RESET = 4006
@@ -159,6 +166,19 @@ class OtaEnabledRequest(Message):
 class OtaEnabledResponse(Message):
     enabled = BoolField(field_number=1)
 
+class AdbModeResponse(Message):
+    status = UInt32Field(field_number=1)
+
+class AdbModeRequest(Message):
+    enable = BoolField(field_number=1)
+
+class NameSetRequest(Message):
+    name = BytesField(field_number=1)
+
+class AuthenticateRequest(Message):
+    signedAuthenticationChallenge = BytesField(field_number=1)
+
+
 class State(Enum):
     STATE_INIT = 0
     EXCHANGE_HELLO = 1
@@ -166,6 +186,7 @@ class State(Enum):
     WAIT_FOR_COMMAND = 3
 
 class BleModule(object):
+    # NOTE, this is device specific, you'll have to figure out your own device
     COMPANION_DEVICE_UUID = '7A1FAD2E-AA0E-4840-8E48-AF278FA86911'
     COMPANION_CCS_UUID = '7A442881-509C-47FA-AC02-B06A37D9EB76'
     COMPANION_STATUS_UUID = '7A442666-509C-47FA-AC02-B06A37D9EB76'
@@ -282,6 +303,8 @@ class CompanionClient(BleModule):
 
         elif self.state == State.WAIT_FOR_COMMAND:
             if self.handler:
+                if (resp.code != ResponseCode.SUCCESS):
+                    self.handle_not_implemented(resp.code, resp.body)
                 self.handler(resp.code, resp.body)
 
     def send_message(self, method, body=None, handler=None):
@@ -373,6 +396,51 @@ class CompanionClient(BleModule):
         req = OtaEnabledRequest()
         req.enable = enable
         self.send_message(Method.OTA_ENABLED_SET, req, handler=handler)
+
+    def adb_mode_status(self):
+        def handler(code, body):
+            if code == ResponseCode.SUCCESS:
+                resp = AdbModeResponse()
+                resp.parse_from_bytes(body)
+                print("Status: %d" % resp.status)
+            else:
+                print("Response failure: ", str(code))
+        self.send_message(Method.ADB_MODE_STATUS, handler=handler)
+
+    def adb_mode_set(self, mode):
+        def handler(code, body):
+            print("Success")
+        req = AdbModeRequest()
+        req.enable = mode
+        self.send_message(Method.DEV_MODE_SET, req, handler=handler)
+
+    def name_set(self, name):
+        def handler(code, body):
+            if code == ResponseCode.SUCCESS:
+                print("Success")
+            else:
+                print("Response failure: ", str(code))
+        req = NameSetRequest()
+        req.name = name
+        self.send_message(Method.NAME_SET, req, handler=handler)
+
+    def authenticate(self):
+        #/data/data/com.oculus.companion.server/shared_prefs/com.oculus.companion.identity_secure.xml
+        # Shouldnt be able to reset this over bluetooth without authenticating.
+        skey = bytearray.fromhex(open("secret_key","r").read())
+        #hmac the challenge
+        digest = hmac.HMAC(skey, self.authenticationChallenge, "sha256").digest()
+
+        def handler(code, body):
+            if code == ResponseCode.SUCCESS:
+                print("Success")
+            else:
+                print("Response failure: ", str(code))
+
+        req = AuthenticateRequest()
+        req.signedAuthenticationChallenge = digest
+        self.send_message(Method.AUTHENTICATE, req, handler=handler)
+
 
 if __name__ == '__main__':
     try:
