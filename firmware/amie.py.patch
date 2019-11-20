@@ -1,0 +1,59 @@
+diff --git a/a/amie.py b/b/amie.py
+index 4bec078..1114c31 100644
+--- a/a/amie.py
++++ b/b/amie.py
+@@ -12,6 +12,7 @@ import ida_idaapi
+ import ida_idp
+ import ida_kernwin
+ import ida_lines
++import ida_name
+ import ida_segregs
+ import ida_ua
+ 
+@@ -41,8 +42,8 @@ class Arch(object):
+                         for key, value in data.iteritems()}
+             return data
+ 
++        hook = unicode_to_str if sys.version_info[0] < 3 else None
+         with open(os.path.join(cur_path, file_name), "r") as fd:
+-            hook = unicode_to_str if sys.version_info[0] < 3 else None
+             self.data = json.loads(fd.read(), object_hook=hook)
+ 
+         self.regs, self.regs_enc = {}, {}
+@@ -59,6 +60,9 @@ class Arch(object):
+             else:
+                 self.insns.update(insns)
+ 
++        with open(os.path.join(cur_path, "nrf52.json"), "r") as fd:
++            self.nrf52 = json.loads(fd.read(), object_hook=hook)["registers"]
++
+     def matches(self, op, reg_op):
+         op_str = "{:0{size}b}".format(op, size=len(reg_op))[: len(reg_op)]
+         for i in range(len(op_str)):
+@@ -101,7 +105,14 @@ class Arch(object):
+         if not val:
+             return None
+ 
+-        if tag == ida_lines.SCOLOR_REG:
++        if tag in [ida_lines.SCOLOR_DNAME, ida_lines.SCOLOR_ADDR]:
++            if len(val) > 8 and all(c in "0123456789ABCDEF" for c in val[:8]):
++                val = val[8:]
++            if val in self.nrf52:
++                register = self.nrf52[val]
++                return register["long_name"], register["purpose"]
++
++        elif tag == ida_lines.SCOLOR_REG:
+             if val.split(".")[0] in self.regs:
+                 register = self.regs[val.split(".")[0]]
+                 return register["long_name"], register["purpose"]
+@@ -428,6 +439,10 @@ class AMIE(ida_idaapi.plugin_t, ida_idp.IDP_Hooks, ida_kernwin.UI_Hooks):
+             if e and e.op == ida_hexrays.cot_helper:
+                 hint = self.arch.hint(e.ea, ida_lines.SCOLOR_REG, e.helper)
+ 
++            elif e and e.op == ida_hexrays.cot_obj:
++                val = ida_name.get_name(e.obj_ea)
++                hint = self.arch.hint(e.ea, ida_lines.SCOLOR_ADDR, val)
++
+             elif e and e.op == ida_hexrays.cit_asm:
+                 item = AMIE.extract_item(args[0].ct, True)
+                 if item and item[1]:
