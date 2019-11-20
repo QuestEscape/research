@@ -42,14 +42,18 @@ for name, (addr, size) in data["peripherals"].items():
     else:
         add_segment(addr, size, name)
 
-for name, (addr, count, size) in data["addresses"].items():
-    flag = {
-        1: ida_bytes.byte_flag(),
-        2: ida_bytes.word_flag(),
-        4: ida_bytes.dword_flag()
-    }[size]
-    ida_bytes.create_data(addr, flag, count * size, ida_netnode.BADNODE)
-    ida_name.set_name(addr, name)
+for name, (addr, reg_count, reg_size, clu_count, clu_size) in data["addresses"].items():
+    for m in range(clu_count):
+        for n in range(reg_count):
+            reg_name = name.replace('<m>', str(m)).replace('<n>', str(n))
+            reg_addr = addr + m * clu_size + n * reg_size
+
+            ida_bytes.create_data(reg_addr, {
+                1: ida_bytes.byte_flag(),
+                2: ida_bytes.word_flag(),
+                4: ida_bytes.dword_flag()
+            }[reg_size], reg_size, ida_netnode.BADNODE)
+            ida_name.set_name(reg_addr, reg_name)
 
 base_addr = ida_segment.get_segm_by_name("ROM").start_ea
 for name, offset in data["interrupts"].items():

@@ -1,7 +1,7 @@
-diff --git a/a/amie.py b/b/amie.py
-index 4bec078..1114c31 100644
---- a/a/amie.py
-+++ b/b/amie.py
+diff --git a/amie.py b/amie.py
+index 4bec078..d140999 100644
+--- a/amie.py
++++ b/amie.py
 @@ -12,6 +12,7 @@ import ida_idaapi
  import ida_idp
  import ida_kernwin
@@ -30,7 +30,7 @@ index 4bec078..1114c31 100644
      def matches(self, op, reg_op):
          op_str = "{:0{size}b}".format(op, size=len(reg_op))[: len(reg_op)]
          for i in range(len(op_str)):
-@@ -101,7 +105,14 @@ class Arch(object):
+@@ -101,7 +105,15 @@ class Arch(object):
          if not val:
              return None
  
@@ -38,15 +38,16 @@ index 4bec078..1114c31 100644
 +        if tag in [ida_lines.SCOLOR_DNAME, ida_lines.SCOLOR_ADDR]:
 +            if len(val) > 8 and all(c in "0123456789ABCDEF" for c in val[:8]):
 +                val = val[8:]
-+            if val in self.nrf52:
-+                register = self.nrf52[val]
-+                return register["long_name"], register["purpose"]
++            for name, register in self.nrf52.items():
++                name = re.sub('<[mn]>', '(\\\d+)', name)
++                if re.match(name, val):
++                    return register["long_name"], register["purpose"]
 +
 +        elif tag == ida_lines.SCOLOR_REG:
              if val.split(".")[0] in self.regs:
                  register = self.regs[val.split(".")[0]]
                  return register["long_name"], register["purpose"]
-@@ -428,6 +439,10 @@ class AMIE(ida_idaapi.plugin_t, ida_idp.IDP_Hooks, ida_kernwin.UI_Hooks):
+@@ -428,6 +440,10 @@ class AMIE(ida_idaapi.plugin_t, ida_idp.IDP_Hooks, ida_kernwin.UI_Hooks):
              if e and e.op == ida_hexrays.cot_helper:
                  hint = self.arch.hint(e.ea, ida_lines.SCOLOR_REG, e.helper)
  
