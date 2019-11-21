@@ -178,6 +178,6 @@ Using the SDK, we created an IDAPython script that does it all automatically:
 
 You can find it under the name `setup_nrf52.py`. The accompanying `nrf52.json` file contains all the information needed by the script. For the nRF52 specific data, we simply had to parse the `nrf52.svd` file from the SDK. For the Cortex-M4 generic data, there sadly was no SVD file available, so we had to create our own by parsing the corresponding headers.
 
-Finally you can apply the patch from this repository to a well-known IDA Pro plugin to display the description and bitfields when you're hovering a register name in the Disassembly or Pseudocode view.
+Finally you can apply the patch from this repository to an existing IDA Pro plugin to display the description and bitfields when you're hovering a register name in the Disassembly or Pseudocode view.
 
 That's all for now, next time we will try documenting the firmware itself.
