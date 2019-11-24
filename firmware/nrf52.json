@@ -90,18 +90,18 @@
     "DCB.DCRSR": [3758157300, 1, 4, 1, 4],
     "DCB.DEMCR": [3758157308, 1, 4, 1, 4],
     "DCB.DHCSR": [3758157296, 1, 4, 1, 4],
-    "DPB.FP_COMP_<n>": [3758104584, 8, 4, 1, 32],
+    "DPB.FP_COMP<n>": [3758104584, 8, 4, 1, 32],
     "DPB.FP_CTRL": [3758104576, 1, 4, 1, 4],
     "DPB.FP_REMAP": [3758104580, 1, 4, 1, 4],
-    "DWT.DWT_COMP_<n>": [3758100512, 8, 4, 1, 32],
+    "DWT.DWT_COMP<n>": [3758100512, 8, 4, 1, 32],
     "DWT.DWT_CPICNT": [3758100488, 1, 4, 1, 4],
     "DWT.DWT_CTRL": [3758100480, 1, 4, 1, 4],
     "DWT.DWT_CYCCNT": [3758100484, 1, 4, 1, 4],
     "DWT.DWT_EXCCNT": [3758100492, 1, 4, 1, 4],
     "DWT.DWT_FOLDCNT": [3758100504, 1, 4, 1, 4],
-    "DWT.DWT_FUNCTION_<n>": [3758100520, 8, 4, 1, 32],
+    "DWT.DWT_FUNCTION<n>": [3758100520, 8, 4, 1, 32],
     "DWT.DWT_LSUCNT": [3758100500, 1, 4, 1, 4],
-    "DWT.DWT_MASK_<n>": [3758100516, 8, 4, 1, 32],
+    "DWT.DWT_MASK<n>": [3758100516, 8, 4, 1, 32],
     "DWT.DWT_PCSR": [3758100508, 1, 4, 1, 4],
     "DWT.DWT_SLEEPCNT": [3758100496, 1, 4, 1, 4],
     "ECB.ECBDATAPTR": [1073800452, 1, 4, 1, 4],
@@ -219,9 +219,9 @@
     "I2S.TXD.PTR": [1073894720, 1, 4, 1, 4],
     "ICB.ACTLR": [3758153736, 1, 4, 1, 4],
     "ICB.ICTR": [3758153732, 1, 4, 1, 4],
-    "ITM.ITM_STIM_<n>": [3758096384, 256, 4, 1, 1024],
+    "ITM.ITM_STIM<n>": [3758096384, 256, 4, 1, 1024],
     "ITM.ITM_TCR": [3758100096, 1, 4, 1, 4],
-    "ITM.ITM_TER_<n>": [3758099968, 8, 4, 1, 32],
+    "ITM.ITM_TER<n>": [3758099968, 8, 4, 1, 32],
     "ITM.ITM_TPR": [3758100032, 1, 4, 1, 4],
     "LPCOMP.ANADETECT": [1073820960, 1, 4, 1, 4],
     "LPCOMP.ENABLE": [1073820928, 1, 4, 1, 4],
@@ -309,12 +309,12 @@
     "NFCT.TASKS_STARTTX": [1073762316, 1, 4, 1, 4],
     "NFCT.TXD.AMOUNT": [1073763612, 1, 4, 1, 4],
     "NFCT.TXD.FRAMECONFIG": [1073763608, 1, 4, 1, 4],
-    "NVIC.NVIC_IABR_<n>": [3758154496, 16, 4, 1, 64],
-    "NVIC.NVIC_ICER_<n>": [3758154112, 16, 4, 1, 64],
-    "NVIC.NVIC_ICPR_<n>": [3758154368, 16, 4, 1, 64],
-    "NVIC.NVIC_IPR_<n>": [3758154752, 124, 4, 1, 496],
-    "NVIC.NVIC_ISER_<n>": [3758153984, 16, 4, 1, 64],
-    "NVIC.NVIC_ISPR_<n>": [3758154240, 16, 4, 1, 64],
+    "NVIC.NVIC_IABR<n>": [3758154496, 16, 4, 1, 64],
+    "NVIC.NVIC_ICER<n>": [3758154112, 16, 4, 1, 64],
+    "NVIC.NVIC_ICPR<n>": [3758154368, 16, 4, 1, 64],
+    "NVIC.NVIC_IPR<n>": [3758154752, 124, 4, 1, 496],
+    "NVIC.NVIC_ISER<n>": [3758153984, 16, 4, 1, 64],
+    "NVIC.NVIC_ISPR<n>": [3758154240, 16, 4, 1, 64],
     "NVMC.CONFIG": [1073865988, 1, 4, 1, 4],
     "NVMC.ERASEALL": [1073865996, 1, 4, 1, 4],
     "NVMC.ERASEPAGE": [1073865992, 1, 4, 1, 4],
@@ -1686,7 +1686,7 @@
       "long_name": "Debug Halting Control and Status Register (at 0xe000edf0, read-write)",
       "purpose": "Controls halting debug\n\nDBGKEY, bits [31:16]  - Debug key\nS_RESET_ST, bit [25]  - Indicates whether the processor has been reset since the\n                        last read of DHCSR\nS_RETIRE_ST, bit [24] - Set to 1 every time the processor retires one or more\n                        instructions\nS_LOCKUP, bit [19]    - Indicates whether the processor is locked up because of\n                        an unrecoverable exception\nS_SLEEP, bit [18]     - Indicates whether the processor is sleeping\nS_HALT, bit [17]      - Indicates whether the processor is in Debug state\nS_REGRDY, bit [16]    - A handshake flag for transfers through the DCRDR\nC_SNAPSTALL, bit [5]  - Allow imprecise entry to Debug state\nC_MASKINTS, bit [3]   - When debug is enabled, the debugger can write to this\n                        bit to mask PendSV, SysTick and external configurable\n                        interrupts\nC_STEP, bit [2]       - Processor step bit\nC_HALT, bit [1]       - Processor halt bit\nC_DEBUGEN, bit [0]    - Halting debug enable bit"
     },
-    "DPB.FP_COMP_<n>": {
+    "DPB.FP_COMP<n>": {
       "long_name": "FlashPatch Comparator Register <n> (at 0xe0002008, read-write)",
       "purpose": "Holds an address for comparison with addresses in the Code memory region, see\nThe system address map on page B3-648\n\nREPLACE, bits [31:30] - Defines the behavior when the COMP address is matched; 0\n                        for None (Remap to remap address, see FlashPatch Remap\n                        register, FP_REMAP on page C1-818), 1 for None\n                        (Breakpoint on instruction at '000':COMP:'00'), 10 for\n                        None (Breakpoint on instruction at '000':COMP:'10'), 11\n                        for None (Breakpoint on both instructions at\n                        '000':COMP:'00' and '000':COMP:'10')\nCOMP, bits [28:2]     - Bits[28:2] of the address to compare with addresses from\n                        the Code memory region, see The\n                        system address map on page B3-592\nENABLE, bit [0]       - Enable bit for this comparator"
     },
@@ -1698,7 +1698,7 @@
       "long_name": "FlashPatch Remap register (at 0xe0002004, read-write)",
       "purpose": "Indicates whether the implementation supports flash patch remap, and if it does,\nholds the SRAM address for remap\n\nRMPSPT, bit [29]   - Indicates whether the FPB unit supports flash patch remap\nREMAP, bits [28:5] - If the FPB supports flash patch remap, this field"
     },
-    "DWT.DWT_COMP_<n>": {
+    "DWT.DWT_COMP<n>": {
       "long_name": "Comparator register (at 0xe0001020, read-write)",
       "purpose": "Provides a reference value for use by comparator n\n\nCOMP, bits [31:0] - Reference value for comparison"
     },
@@ -1722,7 +1722,7 @@
       "long_name": "Folded-instruction Count register (at 0xe0001018, read-write)",
       "purpose": "Increments on each instruction that takes 0 cycles\n\nFOLDCNT, bits [7:0] - Folded instruction counter"
     },
-    "DWT.DWT_FUNCTION_<n>": {
+    "DWT.DWT_FUNCTION<n>": {
       "long_name": "Comparator Function Register <n> (at 0xe0001028, read-write)",
       "purpose": "Controls the operation of comparator n\n\nMATCHED, bit [24]        - Comparator match\nDATAVADDR1, bits [19:16] - When the DATAVMATCH and LNK1ENA bits are both 1, this\n                           field can hold the comparator number of a second\n                           comparator to use for linked address comparison\nDATAVADDR0, bits [15:12] - When the DATAVMATCH bit is set to 1 this field can\n                           hold the comparator number of a comparator to use for\n                           linked address comparison\nDATAVSIZE, bits [11:10]  - For data value matching, specifies the size of the\n                           required data comparison; 0 for None (Byte), 1 for\n                           None (Halfword), 10 for None (Word)\nLNK1ENA, bit [9]         - Indicates whether the implementation supports use of\n                           a second linked comparator\nDATAVMATCH, bit [8]      - Enables data value comparison, if supported\nCYCMATCH, bit [7]        - DWT_FUNCTION0 only\nEMITRANGE, bit [5]       - If the implementation supports trace sampling,\n                           enables generation of Data trace address packets,\n                           that hold Daddr[15\nFUNCTION, bits [3:0]     - Selects action taken on comparator match; 0 for None\n                           (= Disabled or LinkAddr(), see LinkAddr support on\n                           page C1-789)"
     },
@@ -1730,7 +1730,7 @@
       "long_name": "LSU Count register (at 0xe0001014, read-write)",
       "purpose": "Increments on the additional cycles required to execute all load or store\ninstructions\n\nLSUCNT, bits [7:0] - Load-store overhead counter"
     },
-    "DWT.DWT_MASK_<n>": {
+    "DWT.DWT_MASK<n>": {
       "long_name": "Comparator Mask Register <n> (at 0xe0001024, read-write)",
       "purpose": "Provides the size of the ignore mask applied to the access address for address\nrange matching by comparator n\n\nMASK, bits [4:0] - The size of the ignore mask, 0-31 bits, applied to address\n                   range matching"
     },
@@ -2218,7 +2218,7 @@
       "long_name": "Interrupt program status register (IPSR)",
       "purpose": "ISR Number, bits [0:8] - Interrupt service routine number"
     },
-    "ITM.ITM_STIM_<n>": {
+    "ITM.ITM_STIM<n>": {
       "long_name": "Stimulus Port Register <n> (at 0xe0000000, read-write)",
       "purpose": "Provides the interface for generating instrumentation messages\n\nSTIMULUS, bits [31:0] - Data write to the stimulus port FIFO, for forwarding as\n                        a software event packet\nFIFOREADY, bit [0]    - Indicates whether the stimulus port FIFO can accept data"
     },
@@ -2226,7 +2226,7 @@
       "long_name": "Trace Control Register (at 0xe0000e80, read-write)",
       "purpose": "Configures and controls transfers through the ITM interface\n\nBUSY, bit [23]           - Indicates whether the ITM is currently processing\n                           events\nTraceBusID, bits [22:16] - Identifier for multi-source trace stream formatting\nGTSFREQ, bits [11:10]    - Global timestamp frequency; 0 for None (Disable\n                           generation of global timestamps), 1 for None\n                           (Generate timestamp request whenever the ITM detects\n                           a change in global timestamp counter bits[47:7]), 10\n                           for None (Generate timestamp request whenever the ITM\n                           detects a change in global timestamp counter\n                           bits[47:13]), 11 for None (Generate a timestamp after\n                           every packet, if the output FIFO is empty)\nTSPrescale, bits [9:8]   - Local timestamp prescaler, used with the trace packet\n                           reference clock; 0 for None (No prescaling), 1 for\n                           None (Divide by 4), 10 for None (Divide by 16), 11\n                           for None (Divide by 64)\nSWOENA, bit [4]          - Enables asynchronous clocking of the timestamp\n                           counter\nTXENA, bit [3]           - Enables forwarding of hardware event packet from the\n                           DWT unit to the ITM for output to the TPIU\nSYNCENA, bit [2]         - Enables Synchronization packet transmission for a\n                           synchronous TPIU\nTSENA, bit [1]           - Enables Local timestamp generation\nITMENA, bit [0]          - Enables the ITM"
     },
-    "ITM.ITM_TER_<n>": {
+    "ITM.ITM_TER<n>": {
       "long_name": "Trace Enable Register <n> (at 0xe0000e00, read-write)",
       "purpose": "Provide an individual enable bit for each ITM_STIM register\n\nSTIMENA, bits [31:0] - For bit STIMENA[n], in register ITM_TERx"
     },
@@ -2582,27 +2582,27 @@
       "long_name": "NFCT.TXD.FRAMECONFIG (at 0x40005518, read-write)",
       "purpose": "Configuration of outgoing frames\n\nPARITY, bit [0]      - Adding parity or not in the frame\nDISCARDMODE, bit [1] - Discarding unused bits in start or at end of a Frame\nSOF, bit [2]         - Adding SoF or not in TX frames\nCRCMODETX, bit [4]   - CRC mode for outgoing frames"
     },
-    "NVIC.NVIC_IABR_<n>": {
+    "NVIC.NVIC_IABR<n>": {
       "long_name": "Interrupt Active Bit Register <n> (at 0xe000e300, read-only)",
       "purpose": "For a group of 32 interrupts, shows whether each interrupt is active\n\nACTIVE_%s, bit [0] - For register NVIC_IABRn, shows whether interrupt (m+(32*n))\n                     is active"
     },
-    "NVIC.NVIC_ICER_<n>": {
+    "NVIC.NVIC_ICER<n>": {
       "long_name": "Interrupt Clear-Enable Register <n> (at 0xe000e180, read-write)",
       "purpose": "Disables, or reads the enable state of, a group of registers\n\nCLRENA_%s, bit [0] - For register NVIC_ICERn, disables or shows the current\n                     enabled state of interrupt (m+(32*n))"
     },
-    "NVIC.NVIC_ICPR_<n>": {
+    "NVIC.NVIC_ICPR<n>": {
       "long_name": "Interrupt Clear-Pending Register <n> (at 0xe000e280, read-write)",
       "purpose": "For a group of interrupts, clears the interrupt pending status, or shows the\ncurrent pending status\n\nCLRPEND_%s, bit [0] - For register NVIC_ICPRn, clears the pending state of\n                      interrupt (m+(32*n)), or shows whether the state of the\n                      interrupt is pending"
     },
-    "NVIC.NVIC_IPR_<n>": {
+    "NVIC.NVIC_IPR<n>": {
       "long_name": "Interrupt Priority Register <n> (at 0xe000e400, read-write)",
       "purpose": "Sets or reads interrupt priorities\n\nPRI_N3, bits [31:24] - For register NVIC_IPRn, priority of interrupt number 4n+3\nPRI_N2, bits [23:16] - For register NVIC_IPRn, priority of interrupt number 4n+2\nPRI_N1, bits [15:8]  - For register NVIC_IPRn, priority of interrupt number 4n+1\nPRI_N0, bits [7:0]   - For register NVIC_IPRn, priority of interrupt number 4n"
     },
-    "NVIC.NVIC_ISER_<n>": {
+    "NVIC.NVIC_ISER<n>": {
       "long_name": "Interrupt Set-Enable Register <n> (at 0xe000e100, read-write)",
       "purpose": "Enables, or reads the enable state of a group of interrupts\n\nSETENA_%s, bit [0] - For register NVIC_ISERn, enables or shows the current\n                     enabled state of interrupt (m+(32*n))"
     },
-    "NVIC.NVIC_ISPR_<n>": {
+    "NVIC.NVIC_ISPR<n>": {
       "long_name": "Interrupt Set-Pending Register <n> (at 0xe000e200, read-write)",
       "purpose": "For a group of interrupts, changes interrupt status to pending, or shows the\ncurrent pending status\n\nSETPEND_%s, bit [0] - For register NVIC_ISPRn, changes the state of interrupt\n                      (m+(32*n)) to pending, or shows whether the state of the\n                      interrupt is pending"
     },
