@@ -201,3 +201,11 @@ You can find it under the name `setup_nrf52.py`. The accompanying `nrf52.json` f
 Finally you can apply the patch from this repository to an existing IDA Pro plugin to display the description and bitfields when you're hovering a register name in the Disassembly or Pseudocode view.
 
 That's all for now, next time we will try documenting the firmware itself.
+
+## Architecture
+
+Here is the overall architecture, at least, here is how we understand it:
+
+![Components](components.png)
+
+The main CPU communicates via SPI with a component called SyncBoss and based on nRF52 chip. This component is responsible for communicating with all peripherals: local sensors (inertial measurement unit, geomagnetic sensor, proximity sensor) and remote devices (pulsars, aka Oculus Touch). Communication with the pulsars is done via a 2.4 GHz proprietary protocol that we have yet to identify, but it not Bluetooth or Bluetooth Low Energy.
