@@ -1,6 +1,6 @@
-# Peripherals
+# Oculus FW
 
-## Loading the firmware
+## Introduction
 
 While digging into the system image of the Oculus Quest, we stumbled upon the following files located in the `/system/vendor/firmware` directory:
 
@@ -34,7 +34,11 @@ total 664
 -rw-r--r--  1 staff   84036 Sep 23 18:48 lcon.bin
 ```
 
-For now, we will assume (and we will confirm it later) that the files in `lcon-downgrade` are older versions of the ones in `lcon_archive`, to the exception of `lcon-dev.bin` which is missing. Let's take a look at theses files now:
+For now, we will assume (and we will confirm it later) that the files in `lcon-downgrade` are older versions of the ones in `lcon_archive`, to the exception of `lcon-dev.bin` which is missing.
+
+## File Header
+
+Let's take a look at theses files now:
 
 ```
 $ file *.bin
@@ -83,10 +87,13 @@ $ hexdump -C lcon-spl-updater.bin
 
 It looks like these files all start with a header, which has a magic value of `dAeH` or 0x48654164. After searching on GitHub, it doesn't appear that this magic value is known already. Nevertheless, we can figure out the file format.
 
-First, we tried to determine the architecture used by the peripherals.
+First, we tried to determine the architecture used in these firmware images.
 
 ```
+#
 # Option 1: using binwalk
+#
+
 $ binwalk -A lcon.bin
 
 DECIMAL       HEXADECIMAL     DESCRIPTION
@@ -94,7 +101,10 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 15834         0x3DDA          ARM instructions, function prologue
 16106         0x3EEA          ARM instructions, function prologue
 
+#
 # Option 2: using strings
+#
+
 $ strings lcon.bin | grep "NRF52"
 NRF52810
 NRF52832
@@ -119,22 +129,15 @@ After looking at the `libsyncboss.so`, we identified the other fields:
 | 0x00   | magic        | always 0x48654164                  |
 | 0x04   | checksum     | calculated starting from 0x08      |
 | 0x08   | header_size  | always 0x2e                        |
-| 0x0c   | image_type   | 0x01020304, 0xbbccddee, 0xf5f6f7f8 |
+| 0x0c   | image_type   | another magic value                |
 | 0x10   | content_size | doesn't include the signature      |
 | 0x14   | unknown      | ???                                |
 | 0x18   | base_address | where to load the binary at        |
 | 0x1c   | version      | 0xccccbbaa, meaning a.b.c          |
-| 0x20   | version_str  | ???                                | 
+| 0x20   | version_str  | ???                                |
 
-The `image_type` field seems to take one of three magic values:
 
-- 0x01020304 for `lcon.bin`
-- 0xf5f6f7f8 for `lcon-dev.bin`
-- 0xbbccddee for `lcon-spl-updater.bin`
-
-To ease the loading of these files into IDA Pro, we have written a simple loader that you can find in this repository under the name `lcon_loader.py`. For some reason, the code is loaded from file offset 0x100 for `lcon*.bin` and 0x1000 for `lcon-spl*.bin`. We have not found a way to detect this offset from the header.
-
-By comparing `lcon-spl-updater.bin` and `lcon-spl-updater.devsigned.bin` binaries, we can see that the signature occupies the last 64 bytes of the file.
+By comparing `lcon-spl-updater.bin` and `lcon-spl-updater.devsigned.bin` binaries, we can see that the signature occupies the last 64 bytes of the file, starting right after the content.
 
 ```
 $ hexdump -C lcon-spl-updater.bin > /tmp/a
@@ -166,7 +169,24 @@ Here is what the overall layout of the file looks like:
 +--------+---------+---------+-----------+
 ```
 
-## Analyzing the firmware
+## Binary Loader
+
+To ease the loading of these files into IDA Pro, we have written a simple loader that you can find in this repository under the name `lcon_loader.py`. For some reason, the code is loaded from file offset 0x100 for `lcon*.bin` and 0x1000 for `lcon-spl*.bin`. We have not found a way to detect this offset from the header.
+
+Here are the header fields which differ for each firmware image:
+
+| Filename             | Image Type | Base Address | Version |
+| -------------------- | ---------- | ------------ | ------- |
+| lcon.bin             | 0x01020304 | 0xf100       | 1.14.1  |
+| lcon-dev.bin         | 0xf5f6f7f8 | 0x30100      | 1.14.1  |
+| lcon-spl-updater.bin | 0xeeddccbb | 0x10000      | 1.13.0  |
+| spl.bin              | 0x11223344 | 0x2100       | 1.13.0  |
+
+All the binaries in the `lcon-downgrade.bin` archive have a version number of 1.8.0. Most surprising is that they are the same from the original factory version 213561.41500.0, all the way to 415630.67000.0.
+
+You might have noticed an extra binary `spl.bin` that wasn't mentioned before. We discovered that this one is located inside of the `lcon-spl-updater.bin`. It can be extracted using the `extract_spl.py` script.
+
+## Our Utilities
 
 Since we know that an nRF52-something chip is used, we can read the corresponding manual to find out what the addresses being accessed correspond to. Luckily for us, there is even [an SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK) available for download.
 
