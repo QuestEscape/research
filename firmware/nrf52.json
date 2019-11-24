@@ -56,6 +56,16 @@
     "CLOCK.TASKS_LFCLKSTART": [1073741832, 1, 4, 1, 4],
     "CLOCK.TASKS_LFCLKSTOP": [1073741836, 1, 4, 1, 4],
     "CLOCK.TRACECONFIG": [1073743196, 1, 4, 1, 4],
+    "CMO.BPIALL": [3758157688, 1, 4, 1, 4],
+    "CMO.DCCIMVAC": [3758157680, 1, 4, 1, 4],
+    "CMO.DCCISW": [3758157684, 1, 4, 1, 4],
+    "CMO.DCCMVAC": [3758157672, 1, 4, 1, 4],
+    "CMO.DCCMVAU": [3758157668, 1, 4, 1, 4],
+    "CMO.DCCSW": [3758157676, 1, 4, 1, 4],
+    "CMO.DCIMVAC": [3758157660, 1, 4, 1, 4],
+    "CMO.DCISW": [3758157664, 1, 4, 1, 4],
+    "CMO.ICIALLU": [3758157648, 1, 4, 1, 4],
+    "CMO.ICIMVAU": [3758157656, 1, 4, 1, 4],
     "COMP.ENABLE": [1073820928, 1, 4, 1, 4],
     "COMP.EVENTS_CROSS": [1073819916, 1, 4, 1, 4],
     "COMP.EVENTS_DOWN": [1073819908, 1, 4, 1, 4],
@@ -76,30 +86,24 @@
     "COMP.TASKS_START": [1073819648, 1, 4, 1, 4],
     "COMP.TASKS_STOP": [1073819652, 1, 4, 1, 4],
     "COMP.TH": [1073820976, 1, 4, 1, 4],
-    "CoreDebug.DCRDR": [3758157304, 1, 4, 1, 4],
-    "CoreDebug.DCRSR": [3758157300, 1, 4, 1, 4],
-    "CoreDebug.DEMCR": [3758157308, 1, 4, 1, 4],
-    "CoreDebug.DHCSR": [3758157296, 1, 4, 1, 4],
-    "DWT.COMP0": [3758100512, 1, 4, 1, 4],
-    "DWT.COMP1": [3758100528, 1, 4, 1, 4],
-    "DWT.COMP2": [3758100544, 1, 4, 1, 4],
-    "DWT.COMP3": [3758100560, 1, 4, 1, 4],
-    "DWT.CPICNT": [3758100488, 1, 4, 1, 4],
-    "DWT.CTRL": [3758100480, 1, 4, 1, 4],
-    "DWT.CYCCNT": [3758100484, 1, 4, 1, 4],
-    "DWT.EXCCNT": [3758100492, 1, 4, 1, 4],
-    "DWT.FOLDCNT": [3758100504, 1, 4, 1, 4],
-    "DWT.FUNCTION0": [3758100520, 1, 4, 1, 4],
-    "DWT.FUNCTION1": [3758100536, 1, 4, 1, 4],
-    "DWT.FUNCTION2": [3758100552, 1, 4, 1, 4],
-    "DWT.FUNCTION3": [3758100568, 1, 4, 1, 4],
-    "DWT.LSUCNT": [3758100500, 1, 4, 1, 4],
-    "DWT.MASK0": [3758100516, 1, 4, 1, 4],
-    "DWT.MASK1": [3758100532, 1, 4, 1, 4],
-    "DWT.MASK2": [3758100548, 1, 4, 1, 4],
-    "DWT.MASK3": [3758100564, 1, 4, 1, 4],
-    "DWT.PCSR": [3758100508, 1, 4, 1, 4],
-    "DWT.SLEEPCNT": [3758100496, 1, 4, 1, 4],
+    "DCB.DCRDR": [3758157304, 1, 4, 1, 4],
+    "DCB.DCRSR": [3758157300, 1, 4, 1, 4],
+    "DCB.DEMCR": [3758157308, 1, 4, 1, 4],
+    "DCB.DHCSR": [3758157296, 1, 4, 1, 4],
+    "DPB.FP_COMP_<n>": [3758104584, 8, 4, 1, 32],
+    "DPB.FP_CTRL": [3758104576, 1, 4, 1, 4],
+    "DPB.FP_REMAP": [3758104580, 1, 4, 1, 4],
+    "DWT.DWT_COMP_<n>": [3758100512, 8, 4, 1, 32],
+    "DWT.DWT_CPICNT": [3758100488, 1, 4, 1, 4],
+    "DWT.DWT_CTRL": [3758100480, 1, 4, 1, 4],
+    "DWT.DWT_CYCCNT": [3758100484, 1, 4, 1, 4],
+    "DWT.DWT_EXCCNT": [3758100492, 1, 4, 1, 4],
+    "DWT.DWT_FOLDCNT": [3758100504, 1, 4, 1, 4],
+    "DWT.DWT_FUNCTION_<n>": [3758100520, 8, 4, 1, 32],
+    "DWT.DWT_LSUCNT": [3758100500, 1, 4, 1, 4],
+    "DWT.DWT_MASK_<n>": [3758100516, 8, 4, 1, 32],
+    "DWT.DWT_PCSR": [3758100508, 1, 4, 1, 4],
+    "DWT.DWT_SLEEPCNT": [3758100496, 1, 4, 1, 4],
     "ECB.ECBDATAPTR": [1073800452, 1, 4, 1, 4],
     "ECB.EVENTS_ENDECB": [1073799424, 1, 4, 1, 4],
     "ECB.EVENTS_ERRORECB": [1073799428, 1, 4, 1, 4],
@@ -171,6 +175,12 @@
     "FICR.TEMP.T2": [268436540, 1, 4, 1, 4],
     "FICR.TEMP.T3": [268436544, 1, 4, 1, 4],
     "FICR.TEMP.T4": [268436548, 1, 4, 1, 4],
+    "FP.FPCAR": [3758157624, 1, 4, 1, 4],
+    "FP.FPCCR": [3758157620, 1, 4, 1, 4],
+    "FP.FPDSCR": [3758157628, 1, 4, 1, 4],
+    "FP.MVFR0": [3758157632, 1, 4, 1, 4],
+    "FP.MVFR1": [3758157636, 1, 4, 1, 4],
+    "FP.MVFR2": [3758157640, 1, 4, 1, 4],
     "FPU.UNUSED": [1073897472, 1, 4, 1, 4],
     "GPIOTE.CONFIG<n>": [1073767696, 8, 4, 1, 32],
     "GPIOTE.EVENTS_IN<n>": [1073766656, 8, 4, 1, 32],
@@ -207,27 +217,12 @@
     "I2S.TASKS_START": [1073893376, 1, 4, 1, 4],
     "I2S.TASKS_STOP": [1073893380, 1, 4, 1, 4],
     "I2S.TXD.PTR": [1073894720, 1, 4, 1, 4],
-    "ITM.CID0": [3758100464, 1, 4, 1, 4],
-    "ITM.CID1": [3758100468, 1, 4, 1, 4],
-    "ITM.CID2": [3758100472, 1, 4, 1, 4],
-    "ITM.CID3": [3758100476, 1, 4, 1, 4],
-    "ITM.IMCR": [3758100224, 1, 4, 1, 4],
-    "ITM.IRR": [3758100220, 1, 4, 1, 4],
-    "ITM.IWR": [3758100216, 1, 4, 1, 4],
-    "ITM.LAR": [3758100400, 1, 4, 1, 4],
-    "ITM.LSR": [3758100404, 1, 4, 1, 4],
-    "ITM.PID0": [3758100448, 1, 4, 1, 4],
-    "ITM.PID1": [3758100452, 1, 4, 1, 4],
-    "ITM.PID2": [3758100456, 1, 4, 1, 4],
-    "ITM.PID3": [3758100460, 1, 4, 1, 4],
-    "ITM.PID4": [3758100432, 1, 4, 1, 4],
-    "ITM.PID5": [3758100436, 1, 4, 1, 4],
-    "ITM.PID6": [3758100440, 1, 4, 1, 4],
-    "ITM.PID7": [3758100444, 1, 4, 1, 4],
-    "ITM.PORT<n>": [3758096384, 32, 4, 1, 128],
-    "ITM.TCR": [3758100096, 1, 4, 1, 4],
-    "ITM.TER": [3758099968, 1, 4, 1, 4],
-    "ITM.TPR": [3758100032, 1, 4, 1, 4],
+    "ICB.ACTLR": [3758153736, 1, 4, 1, 4],
+    "ICB.ICTR": [3758153732, 1, 4, 1, 4],
+    "ITM.ITM_STIM_<n>": [3758096384, 256, 4, 1, 1024],
+    "ITM.ITM_TCR": [3758100096, 1, 4, 1, 4],
+    "ITM.ITM_TER_<n>": [3758099968, 8, 4, 1, 32],
+    "ITM.ITM_TPR": [3758100032, 1, 4, 1, 4],
     "LPCOMP.ANADETECT": [1073820960, 1, 4, 1, 4],
     "LPCOMP.ENABLE": [1073820928, 1, 4, 1, 4],
     "LPCOMP.EVENTS_CROSS": [1073819916, 1, 4, 1, 4],
@@ -245,17 +240,11 @@
     "LPCOMP.TASKS_SAMPLE": [1073819656, 1, 4, 1, 4],
     "LPCOMP.TASKS_START": [1073819648, 1, 4, 1, 4],
     "LPCOMP.TASKS_STOP": [1073819652, 1, 4, 1, 4],
-    "MPU.CTRL": [3758157204, 1, 4, 1, 4],
-    "MPU.RASR": [3758157216, 1, 4, 1, 4],
-    "MPU.RASR_A1": [3758157224, 1, 4, 1, 4],
-    "MPU.RASR_A2": [3758157232, 1, 4, 1, 4],
-    "MPU.RASR_A3": [3758157240, 1, 4, 1, 4],
-    "MPU.RBAR": [3758157212, 1, 4, 1, 4],
-    "MPU.RBAR_A1": [3758157220, 1, 4, 1, 4],
-    "MPU.RBAR_A2": [3758157228, 1, 4, 1, 4],
-    "MPU.RBAR_A3": [3758157236, 1, 4, 1, 4],
-    "MPU.RNR": [3758157208, 1, 4, 1, 4],
-    "MPU.TYPE": [3758157200, 1, 4, 1, 4],
+    "MPU.MPU_CTRL": [3758157204, 1, 4, 1, 4],
+    "MPU.MPU_RASR": [3758157216, 1, 4, 1, 4],
+    "MPU.MPU_RBAR": [3758157212, 1, 4, 1, 4],
+    "MPU.MPU_RNR": [3758157208, 1, 4, 1, 4],
+    "MPU.MPU_TYPE": [3758157200, 1, 4, 1, 4],
     "MWU.EVENTS_PREGION<m>.RA": [1073873252, 1, 4, 2, 8],
     "MWU.EVENTS_PREGION<m>.WA": [1073873248, 1, 4, 2, 8],
     "MWU.EVENTS_REGION<m>.RA": [1073873156, 1, 4, 4, 8],
@@ -320,13 +309,12 @@
     "NFCT.TASKS_STARTTX": [1073762316, 1, 4, 1, 4],
     "NFCT.TXD.AMOUNT": [1073763612, 1, 4, 1, 4],
     "NFCT.TXD.FRAMECONFIG": [1073763608, 1, 4, 1, 4],
-    "NVIC.IABR<n>": [3758154496, 8, 4, 1, 32],
-    "NVIC.ICER<n>": [3758154112, 8, 4, 1, 32],
-    "NVIC.ICPR<n>": [3758154368, 8, 4, 1, 32],
-    "NVIC.IP<n>": [3758154752, 240, 1, 1, 240],
-    "NVIC.ISER<n>": [3758153984, 8, 4, 1, 32],
-    "NVIC.ISPR<n>": [3758154240, 8, 4, 1, 32],
-    "NVIC.STIR": [3758157568, 1, 4, 1, 4],
+    "NVIC.NVIC_IABR_<n>": [3758154496, 16, 4, 1, 64],
+    "NVIC.NVIC_ICER_<n>": [3758154112, 16, 4, 1, 64],
+    "NVIC.NVIC_ICPR_<n>": [3758154368, 16, 4, 1, 64],
+    "NVIC.NVIC_IPR_<n>": [3758154752, 124, 4, 1, 496],
+    "NVIC.NVIC_ISER_<n>": [3758153984, 16, 4, 1, 64],
+    "NVIC.NVIC_ISPR_<n>": [3758154240, 16, 4, 1, 64],
     "NVMC.CONFIG": [1073865988, 1, 4, 1, 4],
     "NVMC.ERASEALL": [1073865996, 1, 4, 1, 4],
     "NVMC.ERASEPAGE": [1073865992, 1, 4, 1, 4],
@@ -621,28 +609,41 @@
     "SAADC.TASKS_SAMPLE": [1073770500, 1, 4, 1, 4],
     "SAADC.TASKS_START": [1073770496, 1, 4, 1, 4],
     "SAADC.TASKS_STOP": [1073770504, 1, 4, 1, 4],
-    "SCB.ADR": [3758157132, 1, 4, 1, 4],
     "SCB.AFSR": [3758157116, 1, 4, 1, 4],
     "SCB.AIRCR": [3758157068, 1, 4, 1, 4],
     "SCB.BFAR": [3758157112, 1, 4, 1, 4],
     "SCB.CCR": [3758157076, 1, 4, 1, 4],
+    "SCB.CCSIDR": [3758157184, 1, 4, 1, 4],
     "SCB.CFSR": [3758157096, 1, 4, 1, 4],
+    "SCB.CLIDR": [3758157176, 1, 4, 1, 4],
     "SCB.CPACR": [3758157192, 1, 4, 1, 4],
     "SCB.CPUID": [3758157056, 1, 4, 1, 4],
-    "SCB.DFR": [3758157128, 1, 4, 1, 4],
+    "SCB.CSSELR": [3758157188, 1, 4, 1, 4],
+    "SCB.CTR": [3758157180, 1, 4, 1, 4],
     "SCB.DFSR": [3758157104, 1, 4, 1, 4],
     "SCB.HFSR": [3758157100, 1, 4, 1, 4],
     "SCB.ICSR": [3758157060, 1, 4, 1, 4],
-    "SCB.ISAR<n>": [3758157152, 5, 4, 1, 20],
+    "SCB.ID_AFR0": [3758157132, 1, 4, 1, 4],
+    "SCB.ID_DFR0": [3758157128, 1, 4, 1, 4],
+    "SCB.ID_ISAR0": [3758157152, 1, 4, 1, 4],
+    "SCB.ID_ISAR1": [3758157156, 1, 4, 1, 4],
+    "SCB.ID_ISAR2": [3758157160, 1, 4, 1, 4],
+    "SCB.ID_ISAR3": [3758157164, 1, 4, 1, 4],
+    "SCB.ID_ISAR4": [3758157168, 1, 4, 1, 4],
+    "SCB.ID_MMFR0": [3758157136, 1, 4, 1, 4],
+    "SCB.ID_MMFR1": [3758157140, 1, 4, 1, 4],
+    "SCB.ID_MMFR2": [3758157144, 1, 4, 1, 4],
+    "SCB.ID_MMFR3": [3758157148, 1, 4, 1, 4],
+    "SCB.ID_PFR0": [3758157120, 1, 4, 1, 4],
+    "SCB.ID_PFR1": [3758157124, 1, 4, 1, 4],
     "SCB.MMFAR": [3758157108, 1, 4, 1, 4],
-    "SCB.MMFR<n>": [3758157136, 4, 4, 1, 16],
-    "SCB.PFR<n>": [3758157120, 2, 4, 1, 8],
     "SCB.SCR": [3758157072, 1, 4, 1, 4],
     "SCB.SHCSR": [3758157092, 1, 4, 1, 4],
-    "SCB.SHP<n>": [3758157080, 12, 1, 1, 12],
+    "SCB.SHPR1": [3758157080, 1, 4, 1, 4],
+    "SCB.SHPR2": [3758157084, 1, 4, 1, 4],
+    "SCB.SHPR3": [3758157088, 1, 4, 1, 4],
     "SCB.VTOR": [3758157064, 1, 4, 1, 4],
-    "SCnSCB.ACTLR": [3758153736, 1, 4, 1, 4],
-    "SCnSCB.ICTR": [3758153732, 1, 4, 1, 4],
+    "SIG.STIR": [3758157568, 1, 4, 1, 4],
     "SPI0.CONFIG": [1073755476, 1, 4, 1, 4],
     "SPI0.ENABLE": [1073755392, 1, 4, 1, 4],
     "SPI0.EVENTS_READY": [1073754376, 1, 4, 1, 4],
@@ -835,10 +836,10 @@
     "SWI3.UNUSED": [1073836032, 1, 4, 1, 4],
     "SWI4.UNUSED": [1073840128, 1, 4, 1, 4],
     "SWI5.UNUSED": [1073844224, 1, 4, 1, 4],
-    "SysTick.CALIB": [3758153756, 1, 4, 1, 4],
-    "SysTick.CTRL": [3758153744, 1, 4, 1, 4],
-    "SysTick.LOAD": [3758153748, 1, 4, 1, 4],
-    "SysTick.VAL": [3758153752, 1, 4, 1, 4],
+    "SYSTICK.SYST_CALIB": [3758153756, 1, 4, 1, 4],
+    "SYSTICK.SYST_CSR": [3758153744, 1, 4, 1, 4],
+    "SYSTICK.SYST_CVR": [3758153752, 1, 4, 1, 4],
+    "SYSTICK.SYST_RVR": [3758153748, 1, 4, 1, 4],
     "TEMP.A0": [1073792288, 1, 4, 1, 4],
     "TEMP.A1": [1073792292, 1, 4, 1, 4],
     "TEMP.A2": [1073792296, 1, 4, 1, 4],
@@ -932,23 +933,11 @@
     "TIMER4.TASKS_SHUTDOWN": [1073852432, 1, 4, 1, 4],
     "TIMER4.TASKS_START": [1073852416, 1, 4, 1, 4],
     "TIMER4.TASKS_STOP": [1073852420, 1, 4, 1, 4],
-    "TPI.ACPR": [3758358544, 1, 4, 1, 4],
-    "TPI.CLAIMCLR": [3758362532, 1, 4, 1, 4],
-    "TPI.CLAIMSET": [3758362528, 1, 4, 1, 4],
-    "TPI.CSPSR": [3758358532, 1, 4, 1, 4],
-    "TPI.DEVID": [3758362568, 1, 4, 1, 4],
-    "TPI.DEVTYPE": [3758362572, 1, 4, 1, 4],
-    "TPI.FFCR": [3758359300, 1, 4, 1, 4],
-    "TPI.FFSR": [3758359296, 1, 4, 1, 4],
-    "TPI.FIFO0": [3758362348, 1, 4, 1, 4],
-    "TPI.FIFO1": [3758362364, 1, 4, 1, 4],
-    "TPI.FSCR": [3758359304, 1, 4, 1, 4],
-    "TPI.ITATBCTR0": [3758362360, 1, 4, 1, 4],
-    "TPI.ITATBCTR2": [3758362352, 1, 4, 1, 4],
-    "TPI.ITCTRL": [3758362368, 1, 4, 1, 4],
-    "TPI.SPPR": [3758358768, 1, 4, 1, 4],
-    "TPI.SSPSR": [3758358528, 1, 4, 1, 4],
-    "TPI.TRIGGER": [3758362344, 1, 4, 1, 4],
+    "TPIU.TPIU_ACPR": [3758358544, 1, 4, 1, 4],
+    "TPIU.TPIU_CSPSR": [3758358532, 1, 4, 1, 4],
+    "TPIU.TPIU_SPPR": [3758358768, 1, 4, 1, 4],
+    "TPIU.TPIU_SSPSR": [3758358528, 1, 4, 1, 4],
+    "TPIU.TPIU_TYPE": [3758362368, 1, 4, 1, 4],
     "TWI0.ADDRESS": [1073755528, 1, 4, 1, 4],
     "TWI0.ENABLE": [1073755392, 1, 4, 1, 4],
     "TWI0.ERRORSRC": [1073755332, 1, 4, 1, 4],
@@ -1245,8 +1234,10 @@
     "BPROT": [1073741824, 4096],
     "CCM": [1073803264, 4096],
     "CLOCK": [1073741824, 4096],
+    "CMO": [3758157648, 44],
     "COMP": [1073819648, 4096],
-    "CoreDebug": [3758153728, 4096],
+    "DCB": [3758157296, 16],
+    "DPB": [3758104576, 4096],
     "DWT": [3758100480, 4096],
     "ECB": [1073799168, 4096],
     "EGU0": [1073823744, 4096],
@@ -1256,15 +1247,17 @@
     "EGU4": [1073840128, 4096],
     "EGU5": [1073844224, 4096],
     "FICR": [268435456, 4096],
+    "FP": [3758157620, 24],
     "FPU": [1073897472, 4096],
     "GPIOTE": [1073766400, 4096],
     "I2S": [1073893376, 4096],
+    "ICB": [3758153732, 12],
     "ITM": [3758096384, 4096],
     "LPCOMP": [1073819648, 4096],
-    "MPU": [3758153728, 4096],
+    "MPU": [3758157200, 44],
     "MWU": [1073872896, 4096],
     "NFCT": [1073762304, 4096],
-    "NVIC": [3758153728, 4096],
+    "NVIC": [3758153984, 1264],
     "NVMC": [1073864704, 4096],
     "P0": [1342177280, 4096],
     "PDM": [1073860608, 4096],
@@ -1280,8 +1273,8 @@
     "RTC1": [1073811456, 4096],
     "RTC2": [1073889280, 4096],
     "SAADC": [1073770496, 4096],
-    "SCB": [3758153728, 4096],
-    "SCnSCB": [3758153728, 4096],
+    "SCB": [3758157056, 144],
+    "SIG": [3758157568, 4],
     "SPI0": [1073754112, 4096],
     "SPI1": [1073758208, 4096],
     "SPI2": [1073885184, 4096],
@@ -1297,14 +1290,14 @@
     "SWI3": [1073836032, 4096],
     "SWI4": [1073840128, 4096],
     "SWI5": [1073844224, 4096],
-    "SysTick": [3758153728, 4096],
+    "SYSTICK": [3758153744, 16],
     "TEMP": [1073790976, 4096],
     "TIMER0": [1073774592, 4096],
     "TIMER1": [1073778688, 4096],
     "TIMER2": [1073782784, 4096],
     "TIMER3": [1073848320, 4096],
     "TIMER4": [1073852416, 4096],
-    "TPI": [3758358528, 4096],
+    "TPIU": [3758358528, 4096],
     "TWI0": [1073754112, 4096],
     "TWI1": [1073758208, 4096],
     "TWIM0": [1073754112, 4096],
@@ -1368,6 +1361,14 @@
     "AAR.TASKS_STOP": {
       "long_name": "AAR.TASKS_STOP (at 0x4000f008, write-only)",
       "purpose": "Stop resolving addresses"
+    },
+    "APSR": {
+      "long_name": "Application program status register (APSR)",
+      "purpose": "N, bit [31] - Negative flag\nZ, bit [30] - Zero flag\nC, bit [29] - Carry flag\nV, bit [28] - Overflow flag\nQ, bit [27] - DSP overflow and saturation flag"
+    },
+    "BASEPRI": {
+      "long_name": "Base priority mask register (BASEPRI)",
+      "purpose": "BasePri, bits [0:7] - Priority mask bits"
     },
     "BPROT.CONFIG0": {
       "long_name": "BPROT.CONFIG0 (at 0x40000600, read-write)",
@@ -1541,6 +1542,46 @@
       "long_name": "CLOCK.TRACECONFIG (at 0x4000055c, read-write)",
       "purpose": "Clocking options for the Trace Port debug interface\n\nTRACEPORTSPEED, bits [0:1] - Speed of Trace Port clock. Note that the TRACECLK\n                             pin will output this clock divided by two; 0 for\n                             32MHz (32 MHz Trace Port clock (TRACECLK = 16\n                             MHz)), 1 for 16MHz (16 MHz Trace Port clock\n                             (TRACECLK = 8 MHz)), 2 for 8MHz (8 MHz Trace Port\n                             clock (TRACECLK = 4 MHz)), 3 for 4MHz (4 MHz Trace\n                             Port clock (TRACECLK = 2 MHz))\nTRACEMUX, bits [16:17]     - Pin multiplexing of trace signals; 0 for GPIO\n                             (GPIOs multiplexed onto all trace-pins), 1 for\n                             Serial (SWO multiplexed onto P0.18, GPIO\n                             multiplexed onto other trace pins), 2 for Parallel\n                             (TRACECLK and TRACEDATA multiplexed onto P0.20,\n                             P0.18, P0.16, P0.15 and P0.14.)"
     },
+    "CMO.BPIALL": {
+      "long_name": "Branch Predictor Invalidate All (at 0xe000ef78, write-only)",
+      "purpose": "Invalidate all entries from branch predictors\n\nIgnored, bits [31:0] - Ignored. The value written to this field is ignored"
+    },
+    "CMO.DCCIMVAC": {
+      "long_name": "Data Cache line Clean and Invalidate by Address to PoC (at 0xe000ef70, write-only)",
+      "purpose": "Clean and invalidate data or unified cache line by address to PoC\n\nADDRESS, bits [31:0] - Address. Writing to this field initiates the maintenance\n                       operation for the address written"
+    },
+    "CMO.DCCISW": {
+      "long_name": "Data Cache line Clean and Invalidate by Set/Way (at 0xe000ef74, write-only)",
+      "purpose": "Clean and invalidate data or unified cache line by set/way\n\nSetWay, bits [31:4] - Cache set/way. Contains two fields: Way, bits[31:32-A],\n                      the number of the way to operate on\nLevel, bits [3:1]   - Cache level. Cache level to operate on, minus 1"
+    },
+    "CMO.DCCMVAC": {
+      "long_name": "Data Cache line Clean by Address to PoC (at 0xe000ef68, write-only)",
+      "purpose": "Clean data or unified cache line by address to PoC\n\nADDRESS, bits [31:0] - Address. Writing to this field initiates the maintenance\n                       operation for the address written"
+    },
+    "CMO.DCCMVAU": {
+      "long_name": "Data Cache line Clean by address to PoU (at 0xe000ef64, write-only)",
+      "purpose": "Clean data or unified cache line by address to PoU\n\nADDRESS, bits [31:0] - Address. Writing to this field initiates the maintenance\n                       operation for the address written"
+    },
+    "CMO.DCCSW": {
+      "long_name": "Data Cache Clean line by Set/Way (at 0xe000ef6c, write-only)",
+      "purpose": "Clean data or unified cache line by set/way\n\nSetWay, bits [31:4] - Cache set/way. Contains two fields: Way, bits [31:32-A],\n                      the number of the way to operate on\nLevel, bits [3:1]   - Cache level. Cache level to operate on, minus 1"
+    },
+    "CMO.DCIMVAC": {
+      "long_name": "Data Cache line Invalidate by Address to PoC (at 0xe000ef5c, write-only)",
+      "purpose": "Invalidate data or unified cache line by address to PoC\n\nADDRESS, bits [31:0] - Address. Writing to this field initiates the maintenance\n                       operation for the address written"
+    },
+    "CMO.DCISW": {
+      "long_name": "Data Cache line Invalidate by Set/Way (at 0xe000ef60, write-only)",
+      "purpose": "Invalidate data or unified cache line by set/way\n\nSetWay, bits [31:4] - Cache set/way. Contains two fields: Way, bits[31:32-A],\n                      the number of the way to operate on\nLevel, bits [3:1]   - Cache level. Cache level to operate on, minus 1"
+    },
+    "CMO.ICIALLU": {
+      "long_name": "Instruction Cache Invalidate All to PoU (at 0xe000ef50, write-only)",
+      "purpose": "Invalidate all instruction caches to PoU\n\nIgnored, bits [31:0] - The value written to this field is ignored. Ignored"
+    },
+    "CMO.ICIMVAU": {
+      "long_name": "Instruction Cache line Invalidate by Address to PoU (at 0xe000ef58, write-only)",
+      "purpose": "Invalidate instruction cache line by address to PoU\n\nADDRESS, bits [31:0] - Address. Writing to this field initiates the maintenance\n                       operation for the address written"
+    },
     "COMP.ENABLE": {
       "long_name": "COMP.ENABLE (at 0x40013500, read-write)",
       "purpose": "COMP enable\n\nENABLE, bits [0:1] - Enable or disable COMP; 0 for Disabled (Disable), 2 for\n                     Enabled (Enable)"
@@ -1621,101 +1662,85 @@
       "long_name": "COMP.TH (at 0x40013530, read-write)",
       "purpose": "Threshold configuration for hysteresis unit\n\nTHDOWN, bits [0:5] - VDOWN = (THDOWN+1)/64*VREF\nTHUP, bits [8:13]  - VUP = (THUP+1)/64*VREF"
     },
-    "CoreDebug.DCRDR": {
-      "long_name": "CoreDebug.DCRDR (at 0xe000edf8, read-write)",
-      "purpose": "Debug Core Register Data Register"
+    "CONTROL": {
+      "long_name": "Control register (CONTROL)",
+      "purpose": "FPCA, bit [2]  - Context floating-point active\nSPSEL, bit [1] - Active stack pointer\nnPRIV, bit [0] - Thread mode privilege level"
     },
-    "CoreDebug.DCRSR": {
-      "long_name": "CoreDebug.DCRSR (at 0xe000edf4, write-only)",
-      "purpose": "Debug Core Register Selector Register\n\nREGWnR, bits [16:17] - REGWnR\nREGSEL, bits [0:5]   - REGSEL"
+    "CYCLECOUNT": {
+      "long_name": "Cycle count (CYCLECOUNT)",
+      "purpose": ""
     },
-    "CoreDebug.DEMCR": {
-      "long_name": "CoreDebug.DEMCR (at 0xe000edfc, read-write)",
-      "purpose": "Debug Exception and Monitor Control Register\n\nTRCENA, bits [24:25]     - TRCENA\nMON_REQ, bits [19:20]    - MON_REQ\nMON_STEP, bits [18:19]   - MON_STEP\nMON_PEND, bits [17:18]   - MON_PEND\nMON_EN, bits [16:17]     - MON_EN\nVC_HARDERR, bits [10:11] - VC_HARDERR\nVC_INTERR, bits [9:10]   - VC_INTERR\nVC_BUSERR, bits [8:9]    - VC_BUSERR\nVC_STATERR, bits [7:8]   - VC_STATERR\nVC_CHKERR, bits [6:7]    - VC_CHKERR\nVC_NOCPERR, bits [5:6]   - VC_NOCPERR\nVC_MMERR, bits [4:5]     - VC_MMERR\nVC_CORERESET, bits [0:1] - VC_CORERESET"
+    "DCB.DCRDR": {
+      "long_name": "Debug Core Register Data Register (at 0xe000edf8, read-write)",
+      "purpose": "provides debug access to the ARM core registers, special-purpose registers, and\nFloating-point extensio\n\nDBGTMP, bits [31:0] - Data temporary cache, for reading and writing the ARM core\n                      registers, special-purpose registers, and Floating-point\n                      extension registers"
     },
-    "CoreDebug.DHCSR": {
-      "long_name": "CoreDebug.DHCSR (at 0xe000edf0, read-write)",
-      "purpose": "Debug Halting Control and Status Register\n\nDBGKEY, bits [16:32]      - DBGKEY\nS_RESET_ST, bits [25:26]  - S_RESET_ST\nS_RETIRE_ST, bits [24:25] - S_RETIRE_ST\nS_LOCKUP, bits [19:20]    - S_LOCKUP\nS_SLEEP, bits [18:19]     - S_SLEEP\nS_HALT, bits [17:18]      - S_HALT\nS_REGRDY, bits [16:17]    - S_REGRDY\nC_SNAPSTALL, bits [5:6]   - C_SNAPSTALL\nC_MASKINTS, bits [3:4]    - C_MASKINTS\nC_STEP, bits [2:3]        - C_STEP\nC_HALT, bits [1:2]        - C_HALT\nC_DEBUGEN, bits [0:1]     - C_DEBUGEN"
+    "DCB.DCRSR": {
+      "long_name": "Debug Core Register Selector Register (at 0xe000edf4, write-only)",
+      "purpose": "provides debug access to the ARM core registers, special-purpose registers, and\nFloating-point extension regi\n\nREGWnR, bit [16]   - Specifies the access type for the transfer\nREGSEL, bits [6:0] - Specifies the ARM core register, special-purpose register,\n                     or Floating-point extension register, to transfer; 13 for\n                     None (The current SP), 14 for None (LR), 15 for None\n                     (DebugReturnAddress, see The DebugReturnAddress value), 16\n                     for None (xPSR), 17 for None (Main stack pointer, MSP), 18\n                     for None (Process stack pointer, PSP), 20 for None\n                     (Control, Faultmask, Basepri and Primask), 33 for None\n                     (Floating-point Status and Control Register, FPSCR)"
     },
-    "DWT.COMP0": {
-      "long_name": "DWT.COMP0 (at 0xe0001020, read-write)",
-      "purpose": "Comparator Register 0"
+    "DCB.DEMCR": {
+      "long_name": "Debug Exception and Monitor Control Register (at 0xe000edfc, read-write)",
+      "purpose": "Manages vector catch behavior and DebugMonitor handling when debugging\n\nTRCENA, bit [24]      - Global enable for all DWT and ITM features\nMON_REQ, bit [19]     - DebugMonitor semaphore bit\nMON_STEP, bit [18]    - When MON_EN is set to 0, this feature is disabled and\n                        the processor ignores MON_STEP\nMON_PEND, bit [17]    - Sets or clears the pending state of the DebugMonitor\n                        exception\nMON_EN, bit [16]      - Enable the DebugMonitor exception\nVC_HARDERR, bit [10]  - Enable halting debug trap on a HardFault exception\nVC_INTERR, bit [9]    - Enable halting debug trap on a fault occurring during\n                        exception entry or exception return\nVC_BUSERR, bit [8]    - Enable halting debug trap on a BusFault exception\nVC_STATERR, bit [7]   - Enable halting debug trap on a UsageFault exception\n                        caused by a state information error, for example an\n                        Undefined Instruction exception\nVC_CHKERR, bit [6]    - Enable halting debug trap on a UsageFault exception\n                        caused by a checking error, for example an alignment\n                        check error\nVC_NOCPERR, bit [5]   - Enable halting debug trap on a UsageFault caused by an\n                        access to a Coprocessor\nVC_MMERR, bit [4]     - Enable halting debug trap on a MemManage exception\nVC_CORERESET, bit [0] - Enable Reset Vector Catch"
     },
-    "DWT.COMP1": {
-      "long_name": "DWT.COMP1 (at 0xe0001030, read-write)",
-      "purpose": "Comparator Register 1"
+    "DCB.DHCSR": {
+      "long_name": "Debug Halting Control and Status Register (at 0xe000edf0, read-write)",
+      "purpose": "Controls halting debug\n\nDBGKEY, bits [31:16]  - Debug key\nS_RESET_ST, bit [25]  - Indicates whether the processor has been reset since the\n                        last read of DHCSR\nS_RETIRE_ST, bit [24] - Set to 1 every time the processor retires one or more\n                        instructions\nS_LOCKUP, bit [19]    - Indicates whether the processor is locked up because of\n                        an unrecoverable exception\nS_SLEEP, bit [18]     - Indicates whether the processor is sleeping\nS_HALT, bit [17]      - Indicates whether the processor is in Debug state\nS_REGRDY, bit [16]    - A handshake flag for transfers through the DCRDR\nC_SNAPSTALL, bit [5]  - Allow imprecise entry to Debug state\nC_MASKINTS, bit [3]   - When debug is enabled, the debugger can write to this\n                        bit to mask PendSV, SysTick and external configurable\n                        interrupts\nC_STEP, bit [2]       - Processor step bit\nC_HALT, bit [1]       - Processor halt bit\nC_DEBUGEN, bit [0]    - Halting debug enable bit"
     },
-    "DWT.COMP2": {
-      "long_name": "DWT.COMP2 (at 0xe0001040, read-write)",
-      "purpose": "Comparator Register 2"
+    "DPB.FP_COMP_<n>": {
+      "long_name": "FlashPatch Comparator Register <n> (at 0xe0002008, read-write)",
+      "purpose": "Holds an address for comparison with addresses in the Code memory region, see\nThe system address map on page B3-648\n\nREPLACE, bits [31:30] - Defines the behavior when the COMP address is matched; 0\n                        for None (Remap to remap address, see FlashPatch Remap\n                        register, FP_REMAP on page C1-818), 1 for None\n                        (Breakpoint on instruction at '000':COMP:'00'), 10 for\n                        None (Breakpoint on instruction at '000':COMP:'10'), 11\n                        for None (Breakpoint on both instructions at\n                        '000':COMP:'00' and '000':COMP:'10')\nCOMP, bits [28:2]     - Bits[28:2] of the address to compare with addresses from\n                        the Code memory region, see The\n                        system address map on page B3-592\nENABLE, bit [0]       - Enable bit for this comparator"
     },
-    "DWT.COMP3": {
-      "long_name": "DWT.COMP3 (at 0xe0001050, read-write)",
-      "purpose": "Comparator Register 3"
+    "DPB.FP_CTRL": {
+      "long_name": "FlashPatch Control Register (at 0xe0002000, read-write)",
+      "purpose": "Provides FPB implementation information, and the global enable for the FPB unit\n\nREV, bits [31:28]           - Flash Patch Breakpoint architecture revision\nNUM_CODE[6:4], bits [14:12] - Number of comperators 6:4\nNUM_LIT, bits [11:8]        - The number of literal address comparators\n                              supported, starting from NUM_CODE upwards\nNUM_CODE[3:0], bits [7:4]   - Number of comperators 3:0\nKEY, bit [1]                - On any write to FP_CTRL, this bit must be 1\nENABLE, bit [0]             - Enable bit for the FPB"
     },
-    "DWT.CPICNT": {
-      "long_name": "DWT.CPICNT (at 0xe0001008, read-write)",
-      "purpose": "CPI Count Register\n\nCPICNT, bits [0:8] - CPICNT"
+    "DPB.FP_REMAP": {
+      "long_name": "FlashPatch Remap register (at 0xe0002004, read-write)",
+      "purpose": "Indicates whether the implementation supports flash patch remap, and if it does,\nholds the SRAM address for remap\n\nRMPSPT, bit [29]   - Indicates whether the FPB unit supports flash patch remap\nREMAP, bits [28:5] - If the FPB supports flash patch remap, this field"
     },
-    "DWT.CTRL": {
-      "long_name": "DWT.CTRL (at 0xe0001000, read-write)",
-      "purpose": "Control Register\n\nNUMCOMP, bits [28:32]     - NUMCOMP\nNOTRCPKT, bits [27:28]    - NOTRCPKT\nNOEXTTRIG, bits [26:27]   - NOEXTTRIG\nNOCYCCNT, bits [25:26]    - NOCYCCNT\nNOPRFCNT, bits [24:25]    - NOPRFCNT\nCYCEVTENA, bits [22:23]   - CYCEVTENA\nFOLDEVTENA, bits [21:22]  - FOLDEVTENA\nLSUEVTENA, bits [20:21]   - LSUEVTENA\nSLEEPEVTENA, bits [19:20] - SLEEPEVTENA\nEXCEVTENA, bits [18:19]   - EXCEVTENA\nCPIEVTENA, bits [17:18]   - CPIEVTENA\nEXCTRCENA, bits [16:17]   - EXCTRCENA\nPCSAMPLENA, bits [12:13]  - PCSAMPLENA\nSYNCTAP, bits [10:12]     - SYNCTAP\nCYCTAP, bits [9:10]       - CYCTAP\nPOSTINIT, bits [5:9]      - POSTINIT\nPOSTPRESET, bits [1:5]    - POSTPRESET\nCYCCNTENA, bits [0:1]     - CYCCNTENA"
+    "DWT.DWT_COMP_<n>": {
+      "long_name": "Comparator register (at 0xe0001020, read-write)",
+      "purpose": "Provides a reference value for use by comparator n\n\nCOMP, bits [31:0] - Reference value for comparison"
     },
-    "DWT.CYCCNT": {
-      "long_name": "DWT.CYCCNT (at 0xe0001004, read-write)",
-      "purpose": "Cycle Count Register"
+    "DWT.DWT_CPICNT": {
+      "long_name": "CPI Count register (at 0xe0001008, read-write)",
+      "purpose": "Counts additional cycles required to execute multi-cycle instructions and\ninstruction fetch stalls\n\nCPICNT, bits [7:0] - Base instruction overhead counter"
     },
-    "DWT.EXCCNT": {
-      "long_name": "DWT.EXCCNT (at 0xe000100c, read-write)",
-      "purpose": "Exception Overhead Count Register\n\nEXCCNT, bits [0:8] - EXCCNT"
+    "DWT.DWT_CTRL": {
+      "long_name": "Control register (at 0xe0001000, read-write)",
+      "purpose": "Provides configuration and status information for the DWT unit, and used to\ncontrol features of the unit\n\nNUMCOMP, bits [31:28]  - Number of comparators implemented\nNOTRCPKT, bit [27]     - Shows whether the implementation supports trace\n                         sampling and exception tracing\nNOEXTTRIG, bit [26]    - Shows whether the implementation includes external\n                         match signals, CMPMATCH[N]\nNOCYCCNT, bit [25]     - Shows whether the implementation supports a cycle\n                         counter\nNOPRFCNT, bit [24]     - Shows whether the implementation supports the profiling\n                         counters\nCYCEVTENA, bit [22]    - Enables POSTCNT underflow Event counter packets\n                         generation\nFOLDEVTENA, bit [21]   - Enables generation of the Folded-instruction counter\n                         overflow event\nLSUEVTENA, bit [20]    - Enables generation of the LSU counter overflow event\nSLEEPEVTENA, bit [19]  - Enables generation of the Sleep counter overflow event\nEXCEVTENA, bit [18]    - Enables generation of the Exception overhead counter\n                         overflow event\nCPIEVTENA, bit [17]    - Enables generation of the CPI counter overflow event\nEXCTRCENA, bit [16]    - Enables generation of exception trace\nPCSAMPLENA, bit [12]   - Enables use of POSTCNT counter as a timer for Periodic\n                         PC sample packet generation\nSYNCTAP, bits [11:10]  - Selects the position of the synchronization packet\n                         counter tap on the CYCCNT counter; 0 for None\n                         (Disabled. No Synchronization packets), 10 for None\n                         (Synchronization counter tap at CYCCNT[26]), 11 for\n                         None (Synchronization counter tap at CYCCNT[28])\nCYCTAP, bit [9]        - Selects the position of the POSTCNT tap on the CYCCNT\n                         counter\nPOSTINIT, bits [8:5]   - Initial value for the POSTCNT counter\nPOSTPRESET, bits [4:1] - Reload value for the POSTCNT counter\nCYCCNTENA, bit [0]     - Enables CYCCNT"
     },
-    "DWT.FOLDCNT": {
-      "long_name": "DWT.FOLDCNT (at 0xe0001018, read-write)",
-      "purpose": "Folded-instruction Count Register\n\nFOLDCNT, bits [0:8] - FOLDCNT"
+    "DWT.DWT_CYCCNT": {
+      "long_name": "Cycle Count register (at 0xe0001004, read-write)",
+      "purpose": "Shows or sets the value of the processor cycle counter, CYCCNT\n\nCYCCNT, bits [31:0] - Incrementing cycle counter value"
     },
-    "DWT.FUNCTION0": {
-      "long_name": "DWT.FUNCTION0 (at 0xe0001028, read-write)",
-      "purpose": "Function Register 0"
+    "DWT.DWT_EXCCNT": {
+      "long_name": "Exception Overhead Count register (at 0xe000100c, read-write)",
+      "purpose": "Counts the total cycles spent in exception processing\n\nEXCCNT, bits [7:0] - The exception overhead counter"
     },
-    "DWT.FUNCTION1": {
-      "long_name": "DWT.FUNCTION1 (at 0xe0001038, read-write)",
-      "purpose": "Function Register 1"
+    "DWT.DWT_FOLDCNT": {
+      "long_name": "Folded-instruction Count register (at 0xe0001018, read-write)",
+      "purpose": "Increments on each instruction that takes 0 cycles\n\nFOLDCNT, bits [7:0] - Folded instruction counter"
     },
-    "DWT.FUNCTION2": {
-      "long_name": "DWT.FUNCTION2 (at 0xe0001048, read-write)",
-      "purpose": "Function Register 2"
+    "DWT.DWT_FUNCTION_<n>": {
+      "long_name": "Comparator Function Register <n> (at 0xe0001028, read-write)",
+      "purpose": "Controls the operation of comparator n\n\nMATCHED, bit [24]        - Comparator match\nDATAVADDR1, bits [19:16] - When the DATAVMATCH and LNK1ENA bits are both 1, this\n                           field can hold the comparator number of a second\n                           comparator to use for linked address comparison\nDATAVADDR0, bits [15:12] - When the DATAVMATCH bit is set to 1 this field can\n                           hold the comparator number of a comparator to use for\n                           linked address comparison\nDATAVSIZE, bits [11:10]  - For data value matching, specifies the size of the\n                           required data comparison; 0 for None (Byte), 1 for\n                           None (Halfword), 10 for None (Word)\nLNK1ENA, bit [9]         - Indicates whether the implementation supports use of\n                           a second linked comparator\nDATAVMATCH, bit [8]      - Enables data value comparison, if supported\nCYCMATCH, bit [7]        - DWT_FUNCTION0 only\nEMITRANGE, bit [5]       - If the implementation supports trace sampling,\n                           enables generation of Data trace address packets,\n                           that hold Daddr[15\nFUNCTION, bits [3:0]     - Selects action taken on comparator match; 0 for None\n                           (= Disabled or LinkAddr(), see LinkAddr support on\n                           page C1-789)"
     },
-    "DWT.FUNCTION3": {
-      "long_name": "DWT.FUNCTION3 (at 0xe0001058, read-write)",
-      "purpose": "Function Register 3"
+    "DWT.DWT_LSUCNT": {
+      "long_name": "LSU Count register (at 0xe0001014, read-write)",
+      "purpose": "Increments on the additional cycles required to execute all load or store\ninstructions\n\nLSUCNT, bits [7:0] - Load-store overhead counter"
     },
-    "DWT.LSUCNT": {
-      "long_name": "DWT.LSUCNT (at 0xe0001014, read-write)",
-      "purpose": "LSU Count Register\n\nLSUCNT, bits [0:8] - LSUCNT"
+    "DWT.DWT_MASK_<n>": {
+      "long_name": "Comparator Mask Register <n> (at 0xe0001024, read-write)",
+      "purpose": "Provides the size of the ignore mask applied to the access address for address\nrange matching by comparator n\n\nMASK, bits [4:0] - The size of the ignore mask, 0-31 bits, applied to address\n                   range matching"
     },
-    "DWT.MASK0": {
-      "long_name": "DWT.MASK0 (at 0xe0001024, read-write)",
-      "purpose": "Mask Register 0"
+    "DWT.DWT_PCSR": {
+      "long_name": "Program Counter Sample Register (at 0xe000101c, read-only)",
+      "purpose": "Samples the current value of the program counter\n\nEIASAMPLE, bits [31:0] - Executed Instruction Address sample value"
     },
-    "DWT.MASK1": {
-      "long_name": "DWT.MASK1 (at 0xe0001034, read-write)",
-      "purpose": "Mask Register 1"
-    },
-    "DWT.MASK2": {
-      "long_name": "DWT.MASK2 (at 0xe0001044, read-write)",
-      "purpose": "Mask Register 2"
-    },
-    "DWT.MASK3": {
-      "long_name": "DWT.MASK3 (at 0xe0001054, read-write)",
-      "purpose": "Mask Register 3"
-    },
-    "DWT.PCSR": {
-      "long_name": "DWT.PCSR (at 0xe000101c, read-only)",
-      "purpose": "Program Counter Sample Register"
-    },
-    "DWT.SLEEPCNT": {
-      "long_name": "DWT.SLEEPCNT (at 0xe0001010, read-write)",
-      "purpose": "Sleep Count Register\n\nSLEEPCNT, bits [0:8] - SLEEPCNT"
+    "DWT.DWT_SLEEPCNT": {
+      "long_name": "Sleep Count register (at 0xe0001010, read-write)",
+      "purpose": "Counts the total number of cycles that the processor is sleeping\n\nSLEEPCNT, bits [7:0] - Sleep counter"
     },
     "ECB.ECBDATAPTR": {
       "long_name": "ECB.ECBDATAPTR (at 0x4000e504, read-write)",
@@ -1865,6 +1890,14 @@
       "long_name": "EGU5.TASKS_TRIGGER<n> (at 0x40019000, write-only)",
       "purpose": "Trigger <n> for triggering the corresponding TRIGGERED<n> event"
     },
+    "EPSR": {
+      "long_name": "Exception program status register (EPSR)",
+      "purpose": "ICI/IT HighBits, bits [25:26] - Interruptible-continuable instruction bits (high\n                                bits)\nICI/IT LowBits, bits [10:15]  - Interruptible-continuable instruction bits (low\n                                bits)\nT, bit [24]                   - Thumb state bit"
+    },
+    "FAULTMASK": {
+      "long_name": "Fault mask register (FAULTMASK)",
+      "purpose": "FaultMask, bit [0] - Prevent the activation of all exceptions except for NMI"
+    },
     "FICR.CODEPAGESIZE": {
       "long_name": "FICR.CODEPAGESIZE (at 0x10000010, read-only)",
       "purpose": "Code memory page size\n\nCODEPAGESIZE, bits [0:31] - Code memory page size"
@@ -2000,6 +2033,34 @@
     "FICR.TEMP.T4": {
       "long_name": "FICR.TEMP.T4 (at 0x10000444, read-only)",
       "purpose": "Segment end T4.\n\nT, bits [0:7] - T (segment end)register."
+    },
+    "FP.FPCAR": {
+      "long_name": "Floating Point Context Address Register (at 0xe000ef38, read-write)",
+      "purpose": "Holds the location of the unpopulated floating-point register space allocated on\nan exception stack frame"
+    },
+    "FP.FPCCR": {
+      "long_name": "Floating Point Context Control Register (at 0xe000ef34, read-write)",
+      "purpose": "Holds control data for the Floating Point Unit\n\nASPEN, bit [31] - When this bit is set to 1, execution of a floating-point\n                  instruction sets the CONTROL\nLSPEN, bit [30] - Enables lazy context save of FP state\nMONRDY, bit [8] - Indicates whether the software executing when the processor\n                  allocated the FP stack frame was able to set the DebugMonitor\n                  exception to pending\nBFRDY, bit [6]  - Indicates whether the software executing when the processor\n                  allocated the FP stack frame was able to set the BusFault\n                  exception to pending\nMMRDY, bit [5]  - Indicates whether the software executing when the processor\n                  allocated the FP stack frame was able to set the MemManage\n                  exception to pending\nHFRDY, bit [4]  - Indicates whether the software executing when the processor\n                  allocated the FP stack frame was able to set the HardFault\n                  exception to pending\nTHREAD, bit [3] - Indicates the processor mode when it allocated the FP stack\n                  frame\nUSER, bit [1]   - Indicates the privilege level of the software executing when\n                  the processor allocated the FP stack frame\nLSPACT, bit [0] - Indicates whether Lazy preservation of the FP state is active"
+    },
+    "FP.FPDSCR": {
+      "long_name": "Floating Point Default Status Control Register (at 0xe000ef3c, read-write)",
+      "purpose": "Holds the default values for the floating-point status control data that the\nprocessor assigns to the FPSCR when it creates a new floating-point context\n\nAHP, bit [26]       - Default value for FPSCR.AHP\nDN, bit [25]        - Default value for FPSCR.DN\nFZ, bit [24]        - Default value for FPSCR.FZ\nRMode, bits [23:22] - Default value for FPSCR.RMode"
+    },
+    "FP.MVFR0": {
+      "long_name": "Media and FP Feature Register 0 (at 0xe000ef40, read-only)",
+      "purpose": "Describes the features provided by the Floating-point extension\n\nFP rounding modes, bits [31:28]     - Indicates the rounding modes supported by\n                                      the FP floating-point hardware; 1 for None\n                                      (All rounding modes supported)\nShort vectors, bits [27:24]         - Indicates the hardware support for FP\n                                      short vectors; 0 for None (Not supported\n                                      in ARMv7-M)\nSquare root, bits [23:20]           - Indicates the hardware support for FP\n                                      square root operations; 1 for None\n                                      (Supported)\nDivide, bits [19:16]                - Indicates the hardware support for FP\n                                      divide operations; 1 for None (Supported)\nFP exception trapping, bits [15:12] - Indicates whether the FP hardware\n                                      implementation supports exception\n                                      trapping; 0 for None (Not supported in\n                                      ARMv7-M)\nDouble-precision, bits [11:8]       - Indicates the hardware support for FP\n                                      double-precision operations; 0 for None\n                                      (Not supported), 2 for None (Supported)\nSingle-precision, bits [7:4]        - Indicates the hardware support for FP\n                                      single-precision operations; 2 for None\n                                      (Supported)\nA_SIMD registers, bits [3:0]        - Indicates the size of the FP register\n                                      bank; 1 for None (Supported, 16 x 64-bit\n                                      registers)"
+    },
+    "FP.MVFR1": {
+      "long_name": "Media and FP Feature Register 1 (at 0xe000ef44, read-only)",
+      "purpose": "Describes the features provided by the Floating-point extension\n\nFP fused MAC, bits [31:28] - Indicates whether the FP supports fused multiply\n                             accumulate operations; 1 for None (Supported)\nFP HPFP, bits [27:24]      - Floating Point Half-Precision and double-precision;\n                             1 for None (Supports conversion between half-\n                             precision and single precision), 2 for None (As for\n                             0b0001, and also supports conversion between half-\n                             precision and double-precision)\nD_NaN mode, bits [7:4]     - Indicates whether the FP hardware implementation\n                             supports only the Default NaN mode; 1 for None\n                             (Hardware supports propagation of NaN values)\nFtZ mode, bits [3:0]       - Indicates whether the FP hardware implementation\n                             supports only the Flush-to-Zero mode of operation;\n                             1 for None (Hardware supports full denormalized\n                             number arithmetic)"
+    },
+    "FP.MVFR2": {
+      "long_name": "Media and FP Feature Register 2 (at 0xe000ef48, read-only)",
+      "purpose": "Describes the features provided by the floating-point extension\n\nVFP_Misc, bits [7:4] - Indicates the hardware support for FP miscellaneous\n                       features; 0 for None (No support for miscellaneous\n                       features), 4 for None (Support for floating-point\n                       selection, floating-point conversion to integer with\n                       direct rounding modes, floating-point round to i)"
+    },
+    "FPSCR": {
+      "long_name": "Floating point status and control register (FPSCR)",
+      "purpose": "IOC, bit [0]         - Invalid operation cumulative flag\nDZC, bit [1]         - Division by zero cumulative flag\nOFC, bit [2]         - Overflow cumulative flag\nUFC, bit [3]         - Underflow cumulative flag\nIXC, bit [4]         - Inexact cumulative flag\nIDC, bit [7]         - Input subnormal cumulative flag\nIOE, bit [8]         - Invalid operation exception enable bit\nDZE, bit [9]         - Division by Zero exception enable bit\nOFE, bit [10]        - Overflow exception enable bit\nUFE, bit [11]        - Underflow exception enable bit\nIXE, bit [12]        - Inexact exception enable bit\nIDE, bit [13]        - Input Subnormal exception enable bit\nIDE, bit [13]        - Input Subnormal exception enable bit\nLen, bits [16:18]    - Vector length\nStride, bits [20:21] - Stride control\nR-Mode, bits [22:23] - Rounding mode control\nFZ, bit [24]         - Flush-to-zero mode enable bit\nDN, bit [25]         - Default NaN mode enable bit\nQC, bit [27]         - Saturation cumulative flag\nV, bit [28]          - Set if comparison produces an unordered result\nC, bit [29]          - Set if comparison produces an equal, greater than, or\n                       unordered result\nZ, bit [30]          - Set if comparison produces an equal result"
     },
     "FPU.UNUSED": {
       "long_name": "FPU.UNUSED (at 0x40026000, read-only)",
@@ -2145,89 +2206,33 @@
       "long_name": "I2S.TXD.PTR (at 0x40025540, read-write)",
       "purpose": "Transmit buffer RAM start address.\n\nPTR, bits [0:31] - Transmit buffer Data RAM start address. When transmitting,\n                   words containing samples will be fetched from this address.\n                   This address is a word aligned Data RAM address."
     },
-    "ITM.CID0": {
-      "long_name": "ITM.CID0 (at 0xe0000ff0, read-only)",
-      "purpose": "ITM Component  Identification Register #0"
+    "ICB.ACTLR": {
+      "long_name": "Auxiliary Control Register (at 0xe000e008, read-write)",
+      "purpose": "Provides IMPLEMENTATION DEFINED configuration and control options"
     },
-    "ITM.CID1": {
-      "long_name": "ITM.CID1 (at 0xe0000ff4, read-only)",
-      "purpose": "ITM Component  Identification Register #1"
+    "ICB.ICTR": {
+      "long_name": "Interrupt Controller Type Register (at 0xe000e004, read-only)",
+      "purpose": "Provides information about the interrupt controller\n\nINTLINESNUM_%s, bits [3:0] - The total number of interrupt lines supported by an\n                             implementation, defined in groups of 32"
     },
-    "ITM.CID2": {
-      "long_name": "ITM.CID2 (at 0xe0000ff8, read-only)",
-      "purpose": "ITM Component  Identification Register #2"
+    "IPSR": {
+      "long_name": "Interrupt program status register (IPSR)",
+      "purpose": "ISR Number, bits [0:8] - Interrupt service routine number"
     },
-    "ITM.CID3": {
-      "long_name": "ITM.CID3 (at 0xe0000ffc, read-only)",
-      "purpose": "ITM Component  Identification Register #3"
+    "ITM.ITM_STIM_<n>": {
+      "long_name": "Stimulus Port Register <n> (at 0xe0000000, read-write)",
+      "purpose": "Provides the interface for generating instrumentation messages\n\nSTIMULUS, bits [31:0] - Data write to the stimulus port FIFO, for forwarding as\n                        a software event packet\nFIFOREADY, bit [0]    - Indicates whether the stimulus port FIFO can accept data"
     },
-    "ITM.IMCR": {
-      "long_name": "ITM.IMCR (at 0xe0000f00, read-write)",
-      "purpose": "ITM Integration Mode Control Register\n\nINTEGRATION, bits [0:1] - INTEGRATION"
+    "ITM.ITM_TCR": {
+      "long_name": "Trace Control Register (at 0xe0000e80, read-write)",
+      "purpose": "Configures and controls transfers through the ITM interface\n\nBUSY, bit [23]           - Indicates whether the ITM is currently processing\n                           events\nTraceBusID, bits [22:16] - Identifier for multi-source trace stream formatting\nGTSFREQ, bits [11:10]    - Global timestamp frequency; 0 for None (Disable\n                           generation of global timestamps), 1 for None\n                           (Generate timestamp request whenever the ITM detects\n                           a change in global timestamp counter bits[47:7]), 10\n                           for None (Generate timestamp request whenever the ITM\n                           detects a change in global timestamp counter\n                           bits[47:13]), 11 for None (Generate a timestamp after\n                           every packet, if the output FIFO is empty)\nTSPrescale, bits [9:8]   - Local timestamp prescaler, used with the trace packet\n                           reference clock; 0 for None (No prescaling), 1 for\n                           None (Divide by 4), 10 for None (Divide by 16), 11\n                           for None (Divide by 64)\nSWOENA, bit [4]          - Enables asynchronous clocking of the timestamp\n                           counter\nTXENA, bit [3]           - Enables forwarding of hardware event packet from the\n                           DWT unit to the ITM for output to the TPIU\nSYNCENA, bit [2]         - Enables Synchronization packet transmission for a\n                           synchronous TPIU\nTSENA, bit [1]           - Enables Local timestamp generation\nITMENA, bit [0]          - Enables the ITM"
     },
-    "ITM.IRR": {
-      "long_name": "ITM.IRR (at 0xe0000efc, read-only)",
-      "purpose": "ITM Integration Read Register\n\nATREADYM, bits [0:1] - ATREADYM"
+    "ITM.ITM_TER_<n>": {
+      "long_name": "Trace Enable Register <n> (at 0xe0000e00, read-write)",
+      "purpose": "Provide an individual enable bit for each ITM_STIM register\n\nSTIMENA, bits [31:0] - For bit STIMENA[n], in register ITM_TERx"
     },
-    "ITM.IWR": {
-      "long_name": "ITM.IWR (at 0xe0000ef8, write-only)",
-      "purpose": "ITM Integration Write Register\n\nATVALIDM, bits [0:1] - ATVALIDM"
-    },
-    "ITM.LAR": {
-      "long_name": "ITM.LAR (at 0xe0000fb0, write-only)",
-      "purpose": "ITM Lock Access Register"
-    },
-    "ITM.LSR": {
-      "long_name": "ITM.LSR (at 0xe0000fb4, read-only)",
-      "purpose": "ITM Lock Status Register\n\nByteAcc, bits [2:3] - ByteAcc\nAccess, bits [1:2]  - Access\nPresent, bits [0:1] - Present"
-    },
-    "ITM.PID0": {
-      "long_name": "ITM.PID0 (at 0xe0000fe0, read-only)",
-      "purpose": "ITM Peripheral Identification Register #0"
-    },
-    "ITM.PID1": {
-      "long_name": "ITM.PID1 (at 0xe0000fe4, read-only)",
-      "purpose": "ITM Peripheral Identification Register #1"
-    },
-    "ITM.PID2": {
-      "long_name": "ITM.PID2 (at 0xe0000fe8, read-only)",
-      "purpose": "ITM Peripheral Identification Register #2"
-    },
-    "ITM.PID3": {
-      "long_name": "ITM.PID3 (at 0xe0000fec, read-only)",
-      "purpose": "ITM Peripheral Identification Register #3"
-    },
-    "ITM.PID4": {
-      "long_name": "ITM.PID4 (at 0xe0000fd0, read-only)",
-      "purpose": "ITM Peripheral Identification Register #4"
-    },
-    "ITM.PID5": {
-      "long_name": "ITM.PID5 (at 0xe0000fd4, read-only)",
-      "purpose": "ITM Peripheral Identification Register #5"
-    },
-    "ITM.PID6": {
-      "long_name": "ITM.PID6 (at 0xe0000fd8, read-only)",
-      "purpose": "ITM Peripheral Identification Register #6"
-    },
-    "ITM.PID7": {
-      "long_name": "ITM.PID7 (at 0xe0000fdc, read-only)",
-      "purpose": "ITM Peripheral Identification Register #7"
-    },
-    "ITM.PORT<n>": {
-      "long_name": "ITM.PORT<n> (at 0xe0000000, write-only)",
-      "purpose": "ITM Stimulus Port Registers"
-    },
-    "ITM.TCR": {
-      "long_name": "ITM.TCR (at 0xe0000e80, read-write)",
-      "purpose": "ITM Trace Control Register\n\nBUSY, bits [23:24]       - BUSY\nTraceBusID, bits [16:23] - ATBID\nGTSFREQ, bits [10:12]    - Global timestamp frequency\nTSPrescale, bits [8:10]  - TSPrescale\nSWOENA, bits [4:5]       - SWOENA\nDWTENA, bits [3:4]       - DWTENA\nSYNCENA, bits [2:3]      - SYNCENA\nTSENA, bits [1:2]        - TSENA\nITMENA, bits [0:1]       - ITM Enable bit"
-    },
-    "ITM.TER": {
-      "long_name": "ITM.TER (at 0xe0000e00, read-write)",
-      "purpose": "ITM Trace Enable Register"
-    },
-    "ITM.TPR": {
-      "long_name": "ITM.TPR (at 0xe0000e40, read-write)",
-      "purpose": "ITM Trace Privilege Register\n\nPRIVMASK, bits [0:4] - PRIVMASK"
+    "ITM.ITM_TPR": {
+      "long_name": "Trace Privilege Register (at 0xe0000e40, read-write)",
+      "purpose": "Controls which stimulus ports can be accessed by unprivileged code\n\nPRIVMASK, bits [31:0] - Bit mask to enable unprivileged access to ITM stimulus\n                        ports"
     },
     "LPCOMP.ANADETECT": {
       "long_name": "LPCOMP.ANADETECT (at 0x40013520, read-write)",
@@ -2297,49 +2302,29 @@
       "long_name": "LPCOMP.TASKS_STOP (at 0x40013004, write-only)",
       "purpose": "Stop comparator"
     },
-    "MPU.CTRL": {
-      "long_name": "MPU.CTRL (at 0xe000ed94, read-write)",
-      "purpose": "MPU Control Register\n\nPRIVDEFENA, bits [2:3] - PRIVDEFENA\nHFNMIENA, bits [1:2]   - HFNMIENA\nENABLE, bits [0:1]     - ENABLE"
+    "MPU.MPU_CTRL": {
+      "long_name": "MPU Control Register (at 0xe000ed94, read-write)",
+      "purpose": "Enables the MPU, and when the MPU is enabled, controls whether the default\nmemory map is enabled as a background region for privileged accesses, and\nwhether the MPU is enabled for HardFaults, NMIs\n\nPRIVDEFENA, bit [2] - When the ENABLE bit is set to 1, the meaning of this bit\n                      is\nHFNMIENA, bit [1]   - When the ENABLE bit is set to 1, controls whether handlers\n                      executing with priority less than 0 access memory with the\n                      MPU enabled or with the MPU disabled\nENABLE, bit [0]     - Enables the MPU"
     },
-    "MPU.RASR": {
-      "long_name": "MPU.RASR (at 0xe000eda0, read-write)",
-      "purpose": "MPU Region Attribute and Size Register\n\nATTRS, bits [16:32] - MPU Region Attribute field\nXN, bits [28:29]    - ATTRS.XN\nAP, bits [24:27]    - ATTRS.AP\nTEX, bits [19:22]   - ATTRS.TEX\nS, bits [18:19]     - ATTRS.S\nC, bits [17:18]     - ATTRS.C\nB, bits [16:17]     - ATTRS.B\nSRD, bits [8:16]    - Sub-Region Disable\nSIZE, bits [1:6]    - Region Size Field\nENABLE, bits [0:1]  - Region enable bit"
+    "MPU.MPU_RASR": {
+      "long_name": "MPU Region Attribute and Size Register (at 0xe000eda0, read-write)",
+      "purpose": "Defines the size and access behavior of the region identified by MPU_RNR, and\nenables that region\n\nATTRS, bits [31:16] - The MPU Region Attribute field\nSRD, bits [15:8]    - Subregion Disable\nSIZE, bits [5:1]    - Indicates the region size\nENABLE, bit [0]     - Enables this region"
     },
-    "MPU.RASR_A1": {
-      "long_name": "MPU.RASR_A1 (at 0xe000eda8, read-write)",
-      "purpose": "MPU Alias 1 Region Attribute and Size Register"
+    "MPU.MPU_RBAR": {
+      "long_name": "MPU Region Base Address Register (at 0xe000ed9c, read-write)",
+      "purpose": "Holds the base address of the region identified by MPU_RNR\n\nADDR, bits [31:5]  - Base address of the region\nVALID, bit [4]     - On writes, indicates whether the region to update is\n                     specified by MPU_RNR\nREGION, bits [3:0] - On writes, can specify the number of the region to update,\n                     see VALID field description"
     },
-    "MPU.RASR_A2": {
-      "long_name": "MPU.RASR_A2 (at 0xe000edb0, read-write)",
-      "purpose": "MPU Alias 2 Region Attribute and Size Register"
+    "MPU.MPU_RNR": {
+      "long_name": "MPU Region Number Register (at 0xe000ed98, read-write)",
+      "purpose": "Selects the region currently accessed by MPU_RBAR and MPU_RASR\n\nREGION, bits [7:0] - Indicates the memory region accessed by MPU_RBAR and\n                     MPU_RASR"
     },
-    "MPU.RASR_A3": {
-      "long_name": "MPU.RASR_A3 (at 0xe000edb8, read-write)",
-      "purpose": "MPU Alias 3 Region Attribute and Size Register"
+    "MPU.MPU_TYPE": {
+      "long_name": "MPU Type Register (at 0xe000ed90, read-only)",
+      "purpose": "The MPU Type Register indicates how many regions the MPU support\n\nIREGION, bits [23:16] - Instruction region\nDREGION, bits [15:8]  - Number of regions supported by the MPU\nSEPARATE, bit [0]     - Indicates support for separate instruction and data\n                        address maps. RAZ. ARMv7-M only supports a unified MPU"
     },
-    "MPU.RBAR": {
-      "long_name": "MPU.RBAR (at 0xe000ed9c, read-write)",
-      "purpose": "MPU Region Base Address Register\n\nADDR, bits [5:32]  - ADDR\nVALID, bits [4:5]  - VALID\nREGION, bits [0:4] - REGION"
-    },
-    "MPU.RBAR_A1": {
-      "long_name": "MPU.RBAR_A1 (at 0xe000eda4, read-write)",
-      "purpose": "MPU Alias 1 Region Base Address Register"
-    },
-    "MPU.RBAR_A2": {
-      "long_name": "MPU.RBAR_A2 (at 0xe000edac, read-write)",
-      "purpose": "MPU Alias 2 Region Base Address Register"
-    },
-    "MPU.RBAR_A3": {
-      "long_name": "MPU.RBAR_A3 (at 0xe000edb4, read-write)",
-      "purpose": "MPU Alias 3 Region Base Address Register"
-    },
-    "MPU.RNR": {
-      "long_name": "MPU.RNR (at 0xe000ed98, read-write)",
-      "purpose": "MPU Region RNRber Register\n\nREGION, bits [0:8] - REGION"
-    },
-    "MPU.TYPE": {
-      "long_name": "MPU.TYPE (at 0xe000ed90, read-only)",
-      "purpose": "MPU Type Register\n\nIREGION, bits [16:24] - IREGION\nDREGION, bits [8:16]  - DREGION\nSEPARATE, bits [0:1]  - SEPARATE"
+    "MSP": {
+      "long_name": "Main stack pointer (MSP)",
+      "purpose": ""
     },
     "MWU.EVENTS_PREGION<m>.RA": {
       "long_name": "MWU.EVENTS_PREGION<m>.RA (at 0x40020164, read-write)",
@@ -2597,33 +2582,29 @@
       "long_name": "NFCT.TXD.FRAMECONFIG (at 0x40005518, read-write)",
       "purpose": "Configuration of outgoing frames\n\nPARITY, bit [0]      - Adding parity or not in the frame\nDISCARDMODE, bit [1] - Discarding unused bits in start or at end of a Frame\nSOF, bit [2]         - Adding SoF or not in TX frames\nCRCMODETX, bit [4]   - CRC mode for outgoing frames"
     },
-    "NVIC.IABR<n>": {
-      "long_name": "NVIC.IABR<n> (at 0xe000e300, read-write)",
-      "purpose": "Interrupt Active bit Register"
+    "NVIC.NVIC_IABR_<n>": {
+      "long_name": "Interrupt Active Bit Register <n> (at 0xe000e300, read-only)",
+      "purpose": "For a group of 32 interrupts, shows whether each interrupt is active\n\nACTIVE_%s, bit [0] - For register NVIC_IABRn, shows whether interrupt (m+(32*n))\n                     is active"
     },
-    "NVIC.ICER<n>": {
-      "long_name": "NVIC.ICER<n> (at 0xe000e180, read-write)",
-      "purpose": "Interrupt Clear Enable Register"
+    "NVIC.NVIC_ICER_<n>": {
+      "long_name": "Interrupt Clear-Enable Register <n> (at 0xe000e180, read-write)",
+      "purpose": "Disables, or reads the enable state of, a group of registers\n\nCLRENA_%s, bit [0] - For register NVIC_ICERn, disables or shows the current\n                     enabled state of interrupt (m+(32*n))"
     },
-    "NVIC.ICPR<n>": {
-      "long_name": "NVIC.ICPR<n> (at 0xe000e280, read-write)",
-      "purpose": "Interrupt Clear Pending Register"
+    "NVIC.NVIC_ICPR_<n>": {
+      "long_name": "Interrupt Clear-Pending Register <n> (at 0xe000e280, read-write)",
+      "purpose": "For a group of interrupts, clears the interrupt pending status, or shows the\ncurrent pending status\n\nCLRPEND_%s, bit [0] - For register NVIC_ICPRn, clears the pending state of\n                      interrupt (m+(32*n)), or shows whether the state of the\n                      interrupt is pending"
     },
-    "NVIC.IP<n>": {
-      "long_name": "NVIC.IP<n> (at 0xe000e400, read-write)",
-      "purpose": "Interrupt Priority Register (8Bit wide)"
+    "NVIC.NVIC_IPR_<n>": {
+      "long_name": "Interrupt Priority Register <n> (at 0xe000e400, read-write)",
+      "purpose": "Sets or reads interrupt priorities\n\nPRI_N3, bits [31:24] - For register NVIC_IPRn, priority of interrupt number 4n+3\nPRI_N2, bits [23:16] - For register NVIC_IPRn, priority of interrupt number 4n+2\nPRI_N1, bits [15:8]  - For register NVIC_IPRn, priority of interrupt number 4n+1\nPRI_N0, bits [7:0]   - For register NVIC_IPRn, priority of interrupt number 4n"
     },
-    "NVIC.ISER<n>": {
-      "long_name": "NVIC.ISER<n> (at 0xe000e100, read-write)",
-      "purpose": "Interrupt Set Enable Register"
+    "NVIC.NVIC_ISER_<n>": {
+      "long_name": "Interrupt Set-Enable Register <n> (at 0xe000e100, read-write)",
+      "purpose": "Enables, or reads the enable state of a group of interrupts\n\nSETENA_%s, bit [0] - For register NVIC_ISERn, enables or shows the current\n                     enabled state of interrupt (m+(32*n))"
     },
-    "NVIC.ISPR<n>": {
-      "long_name": "NVIC.ISPR<n> (at 0xe000e200, read-write)",
-      "purpose": "Interrupt Set Pending Register"
-    },
-    "NVIC.STIR": {
-      "long_name": "NVIC.STIR (at 0xe000ef00, write-only)",
-      "purpose": "Software Trigger Interrupt Register\n\nINTID, bits [0:9] - INTLINESNUM"
+    "NVIC.NVIC_ISPR_<n>": {
+      "long_name": "Interrupt Set-Pending Register <n> (at 0xe000e200, read-write)",
+      "purpose": "For a group of interrupts, changes interrupt status to pending, or shows the\ncurrent pending status\n\nSETPEND_%s, bit [0] - For register NVIC_ISPRn, changes the state of interrupt\n                      (m+(32*n)) to pending, or shows whether the state of the\n                      interrupt is pending"
     },
     "NVMC.CONFIG": {
       "long_name": "NVMC.CONFIG (at 0x4001e504, read-write)",
@@ -2884,6 +2865,14 @@
     "PPI.TASKS_CHG<m>.EN": {
       "long_name": "PPI.TASKS_CHG<m>.EN (at 0x4001f000, write-only)",
       "purpose": "Enable channel group <m>"
+    },
+    "PRIMASK": {
+      "long_name": "Priority mask register (PRIMASK)",
+      "purpose": "PriMask, bit [0] - Prevent the activation of all exceptions with configurable\n                   priority"
+    },
+    "PSP": {
+      "long_name": "Process stack pointer (PSP)",
+      "purpose": ""
     },
     "PWM0.COUNTERTOP": {
       "long_name": "PWM0.COUNTERTOP (at 0x4001c508, read-write)",
@@ -3801,93 +3790,145 @@
       "long_name": "SAADC.TASKS_STOP (at 0x40007008, write-only)",
       "purpose": "Stop the ADC and terminate any on-going conversion"
     },
-    "SCB.ADR": {
-      "long_name": "SCB.ADR (at 0xe000ed4c, read-only)",
-      "purpose": "Auxiliary Feature Register"
-    },
     "SCB.AFSR": {
-      "long_name": "SCB.AFSR (at 0xe000ed3c, read-write)",
-      "purpose": "Auxiliary Fault Status Register"
+      "long_name": "Auxiliary Fault Status Register (at 0xe000ed3c, read-write)",
+      "purpose": "Provides implementation-specific fault status information and control"
     },
     "SCB.AIRCR": {
-      "long_name": "SCB.AIRCR (at 0xe000ed0c, read-write)",
-      "purpose": "Application Interrupt and Reset Control Register\n\nVECTKEY, bits [16:32]     - VECTKEY\nVECTKEYSTAT, bits [16:32] - VECTKEYSTAT\nENDIANESS, bits [15:16]   - ENDIANESS\nPRIGROUP, bits [8:11]     - PRIGROUP\nSYSRESETREQ, bits [2:3]   - SYSRESETREQ\nVECTCLRACTIVE, bits [1:2] - VECTCLRACTIVE\nVECTRESET, bits [0:1]     - VECTRESET"
+      "long_name": "Application Interrupt and Reset Control Register (at 0xe000ed0c, read-write)",
+      "purpose": "Sets or returns interrupt control data\n\nENDIANNESS, bit [15]   - Indicates the memory system endianness\nPRIGROUP, bits [10:8]  - Priority grouping, indicates the binary point position\nSYSRESETREQ, bit [2]   - System Reset Request\nVECTCLRACTIVE, bit [1] - Writing 1 to this bit clears all active state\n                         information for fixed and configurable exceptions\nVECTRESET, bit [0]     - Writing 1 to this bit causes a local system reset, see\n                         Reset management on page B1-615 for more information"
     },
     "SCB.BFAR": {
-      "long_name": "SCB.BFAR (at 0xe000ed38, read-write)",
-      "purpose": "BusFault Address Register"
+      "long_name": "BusFault Address Register (at 0xe000ed38, read-write)",
+      "purpose": "Shows the address associated with a precise data access fault\n\nADDRESS, bits [31:0] - Data address for a precise bus fault"
     },
     "SCB.CCR": {
-      "long_name": "SCB.CCR (at 0xe000ed14, read-write)",
-      "purpose": "Configuration Control Register\n\nSTKALIGN, bits [9:10]      - STKALIGN\nBFHFNMIGN, bits [8:9]      - BFHFNMIGN\nDIV_0_TRP, bits [4:5]      - DIV_0_TRP\nUNALIGN_TRP, bits [3:4]    - UNALIGN_TRP\nUSERSETMPEND, bits [1:2]   - USERSETMPEND\nNONBASETHRDENA, bits [0:1] - NONBASETHRDENA"
+      "long_name": "Configuration and Control Register (at 0xe000ed14, read-write)",
+      "purpose": "Sets or returns configuration and control data, and provides control over\ncaching and branch prediction\n\nBP, bit [18]            - Branch prediction enable bit\nIC, bit [17]            - Instruction cache enable bit\nDC, bit [16]            - Cache enable bit\nSTKALIGN, bit [9]       - Determines whether the exception entry sequence\n                          guarantees 8-byte stack frame alignment, adjusting the\n                          SP if necessary before saving state\nBFHFNMIGN, bit [8]      - Determines the effect of precise data access faults on\n                          handlers running at priority -1 or priority -2\nDIV_0_TRP, bit [4]      - Controls the trap on divide by 0\nUNALIGN_TRP, bit [3]    - Controls the trapping of unaligned word or halfword\n                          accesses\nUSERSETMPEND, bit [1]   - Controls whether unprivileged software can access the\n                          STIR\nNONBASETHRDENA, bit [0] - Controls whether the processor can enter Thread mode\n                          with exceptions active"
+    },
+    "SCB.CCSIDR": {
+      "long_name": "Cache Size ID Registers (at 0xe000ed80, read-only)",
+      "purpose": "The CCSIDR provides information about the architecture of the caches\n\nWT, bit [31]               - Indicates whether the cache level supports write-\n                             through, see Table B4-4\nWB, bit [30]               - Indicates whether the cache level supports write-\n                             back, see Table B4-4\nRA, bit [29]               - Indicates whether the cache level supports read-\n                             allocation, see Table B4-4\nWA, bit [28]               - Indicates whether the cache level supports write-\n                             allocation, see Table B4-4\nNumSets, bits [27:13]      - (Number of sets in cache)-1, therefore a value of 0\n                             indicates 1 set in the cache\nAssociativity, bits [12:3] - (Associativity of cache)-1, therefore a value of 0\n                             indicates an associativity of 1\nLineSize, bits [2:0]       - (Log2(Number of words in cache line))-2"
     },
     "SCB.CFSR": {
-      "long_name": "SCB.CFSR (at 0xe000ed28, read-write)",
-      "purpose": "Configurable Fault Status Register\n\nUSGFAULTSR, bits [16:32] - Usage Fault Status Register\nBUSFAULTSR, bits [8:16]  - Bus Fault Status Register\nMEMFAULTSR, bits [0:8]   - Memory Manage Fault Status Register"
+      "long_name": "Configurable Fault Status Register (at 0xe000ed28, read-write)",
+      "purpose": "Contains the three Configurable Fault Status Registers\n\nUsageFault, bits [31:16] - Provides information on UsageFault exceptions\nBusFault, bits [15:8]    - Provides information on BusFault exceptions\nMemManage, bits [7:0]    - Provides information on MemManage exceptions"
+    },
+    "SCB.CLIDR": {
+      "long_name": "Cache Level ID Register (at 0xe000ed78, read-only)",
+      "purpose": "The CLIDR identifies: ? The type of cache, or caches, implemented at each level,\nup to a maximum of seven levels\n\nLoUU, bits [29:27]   - Level of Unification Uniprocessor for the cache\n                       hierarchy, see Terminology for Clean, Invalidate, and\n                       Clean and Invalidate operations on page B2-631\nLoC, bits [26:24]    - Level of Coherency for the cache hierarchy\nLoUIS, bits [23:21]  - Level of Unification Inner Shareable for the cache\n                       hierarchy\nCType_%s, bits [1:0] - Indicates the type of cache implemented at each level; 0\n                       for None (No cache), 1 for None (Instruction cache only),\n                       2 for None (Data cache only), 3 for None (Separate\n                       instruction and data caches), 4 for None (Unified cache)"
     },
     "SCB.CPACR": {
-      "long_name": "SCB.CPACR (at 0xe000ed88, read-write)",
-      "purpose": "Coprocessor Access Control Register"
+      "long_name": "Coprocessor Access Control Register (at 0xe000ed88, read-write)",
+      "purpose": "Specifies the access privileges for coprocessors\n\nCP_%s, bits [1:0] - for n values 0-7, 10 and 11 Access privileges for\n                    coprocessor n, see the register diagram; 0 for None (Access\n                    denied. Any attempted access generates a NOCP UsageFault), 1\n                    for None (Privileged access only. An unprivileged access\n                    generates a NOCP UsageFault), 2 for None (Reserved), 3 for\n                    None (Full access)"
     },
     "SCB.CPUID": {
-      "long_name": "SCB.CPUID (at 0xe000ed00, read-only)",
-      "purpose": "CPUID Base Register\n\nIMPLEMENTER, bits [24:32]  - IMPLEMENTER\nVARIANT, bits [20:24]      - VARIANT\nARCHITECTURE, bits [16:20] - ARCHITECTURE\nPARTNO, bits [4:16]        - PARTNO\nREVISION, bits [0:4]       - REVISION"
+      "long_name": "CPUID Base Register (at 0xe000ed00, read-only)",
+      "purpose": "Provides identification information for the processor\n\nIMPLEMENTER, bits [31:24]  - Implementer code assigned by ARM\nVARIANT, bits [23:20]      - IMPLEMENTATION DEFINED variant number\nARCHITECTURE, bits [19:16] - Reads as 0xF\nPARTNO, bits [15:4]        - IMPLEMENTATION DEFINED part number\nREVISION, bits [3:0]       - IMPLEMENTATION DEFINED revision number"
     },
-    "SCB.DFR": {
-      "long_name": "SCB.DFR (at 0xe000ed48, read-only)",
-      "purpose": "Debug Feature Register"
+    "SCB.CSSELR": {
+      "long_name": "Cache Size Selection Register (at 0xe000ed84, read-only)",
+      "purpose": "The CSSELR selects the current CCSIDR by specifying the required cache level\n\nLevel, bits [3:1] - Cache level of required cache\nInD, bit [0]      - Instruction not data bit"
+    },
+    "SCB.CTR": {
+      "long_name": "Cache Type Register (at 0xe000ed7c, read-only)",
+      "purpose": "The CTR provides information about the architecture of the caches\n\nFormat, bits [31:29]   - Indicates the implemented CTR format; 4 for None (ARMv7\n                         format. This is the format described in this section)\nCWG, bits [27:24]      - Cache Write-back Granule\nERG, bits [23:20]      - Exclusives Reservation Granule\nDminLine, bits [19:16] - Log2 of the number of words in the smallest cache line\n                         of all the data caches and unified caches that are\n                         controlled by the processor\nIminLine, bits [3:0]   - Log2 of the number of words in the smallest cache line\n                         of all the instruction caches that are controlled by\n                         the processor"
     },
     "SCB.DFSR": {
-      "long_name": "SCB.DFSR (at 0xe000ed30, read-write)",
-      "purpose": "Debug Fault Status Register\n\nEXTERNAL, bits [4:5] - EXTERNAL\nVCATCH, bits [3:4]   - VCATCH\nDWTTRAP, bits [2:3]  - DWTTRAP\nBKPT, bits [1:2]     - BKPT\nHALTED, bits [0:1]   - HALTED"
+      "long_name": "Debug Fault Status Register (at 0xe000ed30, read-write)",
+      "purpose": "Shows which debug event occurred\n\nEXTERNAL, bit [4] - Indicates a debug event generated because of the assertion\n                    of an external debug request\nVCATCH, bit [3]   - Indicates triggering of a Vector catch\nDWTTRAP, bit [2]  - Indicates a debug event generated by the DWT\nBKPT, bit [1]     - Indicates a debug event generated by BKPT instruction\n                    execution or a breakpoint match in FPB\nHALTED, bit [0]   - Indicates a debug event generated by either"
     },
     "SCB.HFSR": {
-      "long_name": "SCB.HFSR (at 0xe000ed2c, read-write)",
-      "purpose": "HardFault Status Register\n\nDEBUGEVT, bits [31:32] - DEBUGEVT\nFORCED, bits [30:31]   - FORCED\nVECTTBL, bits [1:2]    - VECTTBL"
+      "long_name": "HardFault Status Register (at 0xe000ed2c, read-write)",
+      "purpose": "Shows the cause of any HardFault\n\nDEBUGEVT, bit [31] - Indicates when a Debug event has occurred\nFORCED, bit [30]   - Indicates that a fault with configurable priority has been\n                     escalated to a HardFault exception, because it could not be\n                     made active, because of priority or because it was disabled\nVECTTBL, bit [1]   - Indicates when a fault has occurred because of a vector\n                     table read error on exception processing"
     },
     "SCB.ICSR": {
-      "long_name": "SCB.ICSR (at 0xe000ed04, read-write)",
-      "purpose": "Interrupt Control and State Register\n\nNMIPENDSET, bits [31:32]  - NMIPENDSET\nPENDSVSET, bits [28:29]   - PENDSVSET\nPENDSVCLR, bits [27:28]   - PENDSVCLR\nPENDSTSET, bits [26:27]   - PENDSTSET\nPENDSTCLR, bits [25:26]   - PENDSTCLR\nISRPREEMPT, bits [23:24]  - ISRPREEMPT\nISRPENDING, bits [22:23]  - ISRPENDING\nVECTPENDING, bits [12:21] - VECTPENDING\nRETTOBASE, bits [11:12]   - RETTOBASE\nVECTACTIVE, bits [0:9]    - VECTACTIVE"
+      "long_name": "Interrupt Control and State Register (at 0xe000ed04, read-write)",
+      "purpose": "Provides software control of the NMI, PendSV, and SysTick exceptions, and\nprovides interrupt status information\n\nNMIPENDSET, bit [31]      - On writes, makes the NMI exception active\nPENDSVSET, bit [28]       - On writes, sets the PendSV exception as pending\nPENDSVCLR, bit [27]       - Removes the pending status of the PendSV exception\nPENDSTSET, bit [26]       - On writes, sets the SysTick exception as pending\nPENDSTCLR, bit [25]       - Removes the pending status of the SysTick exception\nISRPREEMPT, bit [23]      - Indicates whether a pending exception will be\n                            serviced on exit from debug halt state\nISRPENDING, bit [22]      - Indicates whether an external interrupt, generated\n                            by the NVIC, is pending\nVECTPENDING, bits [20:12] - The exception number of the highest priority pending\n                            and enabled interrupt\nRETTOBASE, bit [11]       - In Handler mode, indicates whether there is an\n                            active exception other than the exception indicated\n                            by the current value of the IPSR\nVECTACTIVE, bits [8:0]    - The exception number of the current executing\n                            exception"
     },
-    "SCB.ISAR<n>": {
-      "long_name": "SCB.ISAR<n> (at 0xe000ed60, read-only)",
-      "purpose": "Instruction Set Attributes Register"
+    "SCB.ID_AFR0": {
+      "long_name": "Auxiliary Feature Register 0 (at 0xe000ed4c, read-only)",
+      "purpose": "Gives information about the IMPLEMENTATION DEFINED features of a processor\nimplementation"
+    },
+    "SCB.ID_DFR0": {
+      "long_name": "Debug Feature Register 0 (at 0xe000ed48, read-only)",
+      "purpose": "Gives top-level information about the debug system used in the processor\n\nDebug model, M profile, bits [23:20] - Support for memory-mapped debug model for\n                                       M profile processors"
+    },
+    "SCB.ID_ISAR0": {
+      "long_name": "Instruction Set Attribute Register 0 (at 0xe000ed60, read-only)",
+      "purpose": "Gives information about the instruction sets implemented by the processor\n\nDivide_instrs, bits [27:24]    - Indicates the supported Divide instructions\nDebug_instrs, bits [23:20]     - Indicates the supported Debug instructions\nCoproc_instrs, bits [19:16]    - Indicates the supported Coprocessor\n                                 instructions; 0 for None (None supported,\n                                 except for separately attributed architectures,\n                                 for example the Floating-point extension), 1\n                                 for None (Adds support for generic CDP, LDC,\n                                 MCR, MRC, and STC instructions), 2 for None (As\n                                 for 1, and adds support for generic CDP2, LDC2,\n                                 MCR2, MRC2, and STC2 instructions), 3 for None\n                                 (As for 2, and adds support for generic MCRR\n                                 and MRRC instructions, 4 As for 3, and adds\n                                 support for generic MCRR2 and MRRC2 inst)\nCmpBranch_instrs, bits [15:12] - Indicates the supported combined Compare and\n                                 Branch instructions\nBitfield_instrs, bits [11:8]   - Indicates the supported BitField instructions\nBitCount_instrs, bits [7:4]    - Indicates the supported Bit Counting\n                                 instructions"
+    },
+    "SCB.ID_ISAR1": {
+      "long_name": "Instruction Set Attribute Register 1 (at 0xe000ed64, read-only)",
+      "purpose": "Gives information about the instruction sets implemented by the processor\n\nInterwork_instrs, bits [27:24] - Indicates the supported Interworking\n                                 instructions; 0 for None (None supported,\n                                 ARMv7-M reserved), 1 for None (Adds support for\n                                 the BX instruction, and the T bit in the PSR),\n                                 2 for None (As for 1, and adds support for the\n                                 BLX instruction, and PC loads have BX-like\n                                 behavior), 3 for None (ARMv7-M reserved)\nImmediate_instrs, bits [23:20] - Indicates the support for data-processing\n                                 instructions with long immediates\nIfThen_instrs, bits [19:16]    - Indicates the supported IfThen instructions\nExtend_instrs, bits [15:12]    - Indicates the supported Extend instructions; 0\n                                 for None (None supported, ARMv7-M reserved), 1\n                                 for None (Adds support for the SXTB, SXTH,\n                                 UXTB, and UXTH instructions), 2 for None (As\n                                 for 1, and adds support for the SXTAB, SXTAB16,\n                                 SXTAH, SXTB16, UXTAB, UXTAB16, UXTAH, and\n                                 UXTB16 instructions)"
+    },
+    "SCB.ID_ISAR2": {
+      "long_name": "Instruction Set Attribute Register 2 (at 0xe000ed68, read-only)",
+      "purpose": "Gives information about the instruction sets implemented by the processor\n\nReversal_instrs, bits [31:28]      - Indicates the supported Reversal\n                                     instructions; 0 for None (None supported,\n                                     ARMv7-M reserved), 1 for None (Adds support\n                                     for the REV, REV16, and REVSH instructions,\n                                     ARMv7-M reserved), 2 for None (As for 1,\n                                     and adds support for the RBIT instruction)\nMultU_instrs, bits [23:20]         - Indicates the supported advanced unsigned\n                                     Multiply instructions; 0 for None (None\n                                     supported, ARMv7-M reserved), 1 for None\n                                     (Adds support for the UMULL and UMLAL\n                                     instructions), 2 for None (As for 1, and\n                                     adds support for the UMAAL instruction)\nMultS_instrs, bits [19:16]         - Indicates the supported advanced signed\n                                     Multiply instructions; 0 for None (None\n                                     supported, ARMv7-M reserved), 1 for None\n                                     (Adds support for the SMULL and SMLAL\n                                     instructions), 2 for None (As for 1, and\n                                     adds support for the SMLABB, SMLABT,\n                                     SMLALBB, SMLALBT, SMLALTB, SMLALTT, SMLATB,\n                                     SMLATT, SMLAWB, SMLAWT, SMULBB, S), 3 for\n                                     None (As for 2, and adds support for the\n                                     SMLAD, SMLADX, SMLALD, SMLALDX, SMLSD,\n                                     SMLSDX, SMLSLD, SMLSLDX, SMMLA, SMMLAR,\n                                     SMMLS, SMMLSR,)\nMult_instrs, bits [15:12]          - Indicates the supported additional Multiply\n                                     instructions; 0 for None (None supported.\n                                     This means only MUL is supported. ARMv7-M\n                                     reserved), 1 for None (Adds support for the\n                                     MLA instruction, ARMv7-M reserved), 2 for\n                                     None (As for 1, and adds support for the\n                                     MLS instruction)\nMultiAccessInt_instrs, bits [11:8] - Indicates the support for multi-access\n                                     interruptible instructions; 0 for None\n                                     (None supported. This means the LDM and STM\n                                     instructions are not interruptible), 1 for\n                                     None (LDM and STM instructions are\n                                     restartable), 2 for None (LDM and STM\n                                     instructions are continuable)\nMemHint_instrs, bits [7:4]         - Indicates the supported Memory Hint\n                                     instructions; 0 for None (None supported,\n                                     ARMv7-M reserved), 2 for None (Adds support\n                                     for the PLD instruction), 3 for None (As\n                                     for 1 or 2, and adds support for the PLI\n                                     instruction)\nLoadStore_instrs, bits [3:0]       - Indicates the supported additional load and\n                                     store instructions"
+    },
+    "SCB.ID_ISAR3": {
+      "long_name": "Instruction Set Attribute Register 3 (at 0xe000ed6c, read-only)",
+      "purpose": "Gives information about the instruction sets implemented by the processor\n\nTrueNOP_instrs, bits [27:24]   - Indicates the support for a true NOP\n                                 instruction\nThumbCopy_instrs, bits [23:20] - Indicates the supported non flag-setting MOV\n                                 instructions\nTabBranch_instrs, bits [19:16] - Indicates the supported Table Branch\n                                 instructions\nSynchPrim_instrs, bits [15:12] - Must be interpreted with the ID_ISAR4\nSVC_instrs, bits [11:8]        - Indicates the supported SVC instructions\nSIMD_instrs, bits [7:4]        - Indicates the supported SIMD instructions; 0\n                                 for None (None supported, ARMv7-M reserved), 1\n                                 for None (Adds support for the SSAT and USAT\n                                 instructions, and for the Q bit in the PSRs), 2\n                                 for None (Reserved), 3 for None (As for 1, and\n                                 adds support for the PKHBT, PKHTB, QADD16,\n                                 QADD8, QASX, QSUB16, QSUB8, QSAX, SADD16,\n                                 SADD8, SASX, SEL, SHADD16, SH)\nSaturate_instrs, bits [3:0]    - Indicates the supported Saturate instructions"
+    },
+    "SCB.ID_ISAR4": {
+      "long_name": "Instruction Set Attribute Register 4 (at 0xe000ed70, read-only)",
+      "purpose": "Gives information about the instruction sets implemented by the processor\n\nPSR_M_instrs, bits [27:24]          - Indicates the supported M profile\n                                      instructions to modify the PSRs\nSynchPrim_instrs_frac, bits [23:20] - Must be interpreted with the ID_ISAR3\nBarrier_instrs, bits [19:16]        - Indicates the supported Barrier\n                                      instructions\nWriteback_instrs, bits [11:8]       - Indicates the support for Writeback\n                                      addressing modes\nWithShifts_instrs, bits [7:4]       - Indicates the support for instructions\n                                      with shifts; 0 for None (Nonzero shifts\n                                      supported only in MOV and shift\n                                      instructions), 1 for None (Adds support\n                                      for shifts of loads and stores over the\n                                      range LSL 0-3), 2 for None (Reserved), 3\n                                      for None (As for 1, and adds support for\n                                      other constant shift options, on loads,\n                                      stores, and other instructions), 4 for\n                                      None (ARMv7-M reserved)\nUnpriv_instrs, bits [3:0]           - Indicates the supported unprivileged\n                                      instructions; 0 for None (None supported,\n                                      ARMv7-M reserved), 1 for None (Adds\n                                      support for the LDRBT, LDRT, STRBT, and\n                                      STRT instructions), 2 for None (As for 1,\n                                      and adds support for the LDRHT, LDRSBT,\n                                      LDRSHT, and STRHT instructions)"
+    },
+    "SCB.ID_MMFR0": {
+      "long_name": "Memory Model Feature Register 0 (at 0xe000ed50, read-only)",
+      "purpose": "Gives information about the implemented memory model and memory management\nsupport\n\nAuxiliary registers, bits [23:20]   - Indicates the support for Auxiliary\n                                      registers; 0 for None (Not supported), 1\n                                      for None (Support for Auxiliary Control\n                                      Register only), 2 for None (ARMv7-M\n                                      reserved)\nTCM support, bits [19:16]           - Indicates the support for Tightly Coupled\n                                      Memory (TCM); 0 for None (No tightly\n                                      coupled memories implemented), 1 for None\n                                      (Tightly coupled memories implemented with\n                                      IMPLEMENTATION DEFINED control), 2 for\n                                      None (ARMv7-M reserved)\nShareability levels, bits [15:12]   - Indicates the number of shareability\n                                      levels implemented\nOutermost shareability, bits [11:8] - Indicates the outermost shareability\n                                      domain implemented; 0 for None\n                                      (Implemented as Non-cacheable), 1 for None\n                                      (ARMv7-M reserved), 15 for None\n                                      (Shareability ignored)\nPMSA support, bits [7:4]            - Indicates support for a PMSA; 0 for None\n                                      (Not supported), 3 for None (PMSAv7,\n                                      providing support for a base region and\n                                      subregions)"
+    },
+    "SCB.ID_MMFR1": {
+      "long_name": "Memory Model Feature Register 1 (at 0xe000ed54, read-only)",
+      "purpose": "Gives information about the implemented memory model and memory management\nsupport"
+    },
+    "SCB.ID_MMFR2": {
+      "long_name": "Memory Model Feature Register 2 (at 0xe000ed58, read-only)",
+      "purpose": "Gives information about the implemented memory model and memory management\nsupport\n\nWFI stall, bits [27:24] - Indicates the support for Wait For Interrupt (WFI)\n                          stalling"
+    },
+    "SCB.ID_MMFR3": {
+      "long_name": "Memory Model Feature Register 3 (at 0xe000ed5c, read-only)",
+      "purpose": "Gives information about the implemented memory model and memory management\nsupport"
+    },
+    "SCB.ID_PFR0": {
+      "long_name": "Processor Feature Register 0 (at 0xe000ed40, read-only)",
+      "purpose": "Gives top-level information about the instruction sets supported by the\nprocessor\n\nState3, bits [15:12] - ARMv7-M reserved\nState2, bits [11:8]  - ARMv7-M reserved\nState1, bits [7:4]   - Thumb instruction set support; 3 for None (Support for\n                       Thumb encoding including Thumb-2 technology, with all\n                       basic 16-bit and 32-bit instructions)\nState0, bits [3:0]   - ARM instruction set support"
+    },
+    "SCB.ID_PFR1": {
+      "long_name": "Processor Feature Register 1 (at 0xe000ed44, read-only)",
+      "purpose": "Gives top-level information about the instruction sets supported by the\nprocessor\n\nM profile programmers model, bits [11:8] - 0 for None (ARMv7-M reserved), 1 for\n                                           None (Reserved), 2 for None (Two-\n                                           stack programmers model supported)"
     },
     "SCB.MMFAR": {
-      "long_name": "SCB.MMFAR (at 0xe000ed34, read-write)",
-      "purpose": "MemManage Fault Address Register"
-    },
-    "SCB.MMFR<n>": {
-      "long_name": "SCB.MMFR<n> (at 0xe000ed50, read-only)",
-      "purpose": "Memory Model Feature Register"
-    },
-    "SCB.PFR<n>": {
-      "long_name": "SCB.PFR<n> (at 0xe000ed40, read-only)",
-      "purpose": "Processor Feature Register"
+      "long_name": "MemManage Fault Address Register (at 0xe000ed34, read-write)",
+      "purpose": "Shows the address of the memory location that caused an MPU fault\n\nADDRESS, bits [31:0] - Data address for an MPU fault"
     },
     "SCB.SCR": {
-      "long_name": "SCB.SCR (at 0xe000ed10, read-write)",
-      "purpose": "System Control Register\n\nSEVONPEND, bits [4:5]   - SEVONPEND\nSLEEPDEEP, bits [2:3]   - SLEEPDEEP\nSLEEPONEXIT, bits [1:2] - SLEEPONEXIT"
+      "long_name": "System Control Register (at 0xe000ed10, read-write)",
+      "purpose": "Sets or returns system control data\n\nSEVONPEND, bit [4]   - Determines whether an interrupt transition from inactive\n                       state to pending state is a wakeup event\nSLEEPDEEP, bit [2]   - Provides a qualifying hint indicating that waking from\n                       sleep might take longer\nSLEEPONEXIT, bit [1] - Determines whether, on an exit from an ISR that returns\n                       to the base level of execution priority, the processor\n                       enters a sleep state"
     },
     "SCB.SHCSR": {
-      "long_name": "SCB.SHCSR (at 0xe000ed24, read-write)",
-      "purpose": "System Handler Control and State Register\n\nUSGFAULTENA, bits [18:19]    - USGFAULTENA\nBUSFAULTENA, bits [17:18]    - BUSFAULTENA\nMEMFAULTENA, bits [16:17]    - MEMFAULTENA\nSVCALLPENDED, bits [15:16]   - SVCALLPENDED\nBUSFAULTPENDED, bits [14:15] - BUSFAULTPENDED\nMEMFAULTPENDED, bits [13:14] - MEMFAULTPENDED\nUSGFAULTPENDED, bits [12:13] - USGFAULTPENDED\nSYSTICKACT, bits [11:12]     - SYSTICKACT\nPENDSVACT, bits [10:11]      - PENDSVACT\nMONITORACT, bits [8:9]       - MONITORACT\nSVCALLACT, bits [7:8]        - SVCALLACT\nUSGFAULTACT, bits [3:4]      - USGFAULTACT\nBUSFAULTACT, bits [1:2]      - BUSFAULTACT\nMEMFAULTACT, bits [0:1]      - MEMFAULTACT"
+      "long_name": "System Handler Control and State Register (at 0xe000ed24, read-write)",
+      "purpose": "Controls and provides the active and pending status of system exceptions\n\nUSGFAULTENA, bit [18]    - 0 for None (Disable UsageFault), 1 for None (Enable\n                           UsageFault)\nBUSFAULTENA, bit [17]    - 0 for None (Disable BusFault), 1 for None (Enable\n                           BusFault)\nMEMFAULTENA, bit [16]    - 0 for None (Disable MemManage fault), 1 for None\n                           (Enable MemManage fault)\nSVCALLPENDED, bit [15]   - 0 for None (SVCall is not pending), 1 for None\n                           (SVCall is pending)\nBUSFAULTPENDED, bit [14] - 0 for None (BusFault is not pending), 1 for None\n                           (BusFault is pending)\nMEMFAULTPENDED, bit [13] - 0 for None (MemManage is not pending), 1 for None\n                           (MemManage is pending)\nUSGFAULTPENDED, bit [12] - 0 for None (UsageFault is not pending), 1 for None\n                           (UsageFault is pending)\nSYSTICKACT, bit [11]     - 0 for None (SysTick is not active), 1 for None\n                           (SysTick is active)\nPENDSVACT, bit [10]      - 0 for None (PendSV is not active), 1 for None (PendSV\n                           is active)\nMONITORACT, bit [8]      - 0 for None (Monitor is not active), 1 for None\n                           (Monitor is active)\nSVCALLACT, bit [7]       - 0 for None (SVCall is not active), 1 for None (SVCall\n                           is active)\nUSGFAULTACT, bit [3]     - 0 for None (UsageFault is not active), 1 for None\n                           (UsageFault is active)\nBUSFAULTACT, bit [1]     - 0 for None (BusFault is not active), 1 for None\n                           (BusFault is active)\nMEMFAULTACT, bit [0]     - 0 for None (MemManage is not active), 1 for None\n                           (MemManage is active)"
     },
-    "SCB.SHP<n>": {
-      "long_name": "SCB.SHP<n> (at 0xe000ed18, read-write)",
-      "purpose": "System Handlers Priority Registers (4-7, 8-11, 12-15)"
+    "SCB.SHPR1": {
+      "long_name": "System Handler Priority Register 1 (at 0xe000ed18, read-write)",
+      "purpose": "Sets or returns priority for system handlers 4-7\n\nPRI_7, bits [31:24] - Reserved for priority of system handler 7\nPRI_6, bits [23:16] - Priority of system handler 6, UsageFault\nPRI_5, bits [15:8]  - Priority of system handler 5, BusFault\nPRI_4, bits [7:0]   - Priority of system handler 4, MemManage"
+    },
+    "SCB.SHPR2": {
+      "long_name": "System Handler Priority Register 2 (at 0xe000ed1c, read-write)",
+      "purpose": "Sets or returns priority for system handlers 8-11\n\nPRI_11, bits [31:24] - Priority of system handler 11, SVCall\nPRI_10, bits [23:16] - Reserved for priority of system handler 10\nPRI_9, bits [15:8]   - Reserved for priority of system handler 9\nPRI_8, bits [7:0]    - Reserved for priority of system handler 8"
+    },
+    "SCB.SHPR3": {
+      "long_name": "System Handler Priority Register 3 (at 0xe000ed20, read-write)",
+      "purpose": "Sets or returns priority for system handlers 12-15\n\nPRI_15, bits [31:24] - Priority of system handler 15, SysTick\nPRI_14, bits [23:16] - Priority of system handler 14, PendSV\nPRI_13, bits [15:8]  - Reserved for priority of system handler 13\nPRI_12, bits [7:0]   - Priority of system handler 12, DebugMonitor"
     },
     "SCB.VTOR": {
-      "long_name": "SCB.VTOR (at 0xe000ed08, read-write)",
-      "purpose": "Vector Table Offset Register\n\nTBLOFF, bits [7:32] - TBLOFF"
+      "long_name": "Vector Table Offset Register (at 0xe000ed08, read-write)",
+      "purpose": "Holds the vector table address\n\nTBLOFF, bits [31:7] - Bits[31:7] of the vector table address"
     },
-    "SCnSCB.ACTLR": {
-      "long_name": "SCnSCB.ACTLR (at 0xe000e008, read-write)",
-      "purpose": "Auxiliary Control Register\n\nDISOOFP, bits [9:10]   - DISOOFP\nDISFPCA, bits [8:9]    - DISFPCA\nDISFOLD, bits [2:3]    - DISFOLD\nDISDEFWBUF, bits [1:2] - DISDEFWBUF\nDISMCYCINT, bits [0:1] - DISMCYCINT"
-    },
-    "SCnSCB.ICTR": {
-      "long_name": "SCnSCB.ICTR (at 0xe000e004, read-only)",
-      "purpose": "Interrupt Controller Type Register\n\nINTLINESNUM, bits [0:4] - INTLINESNUM"
+    "SIG.STIR": {
+      "long_name": "Software Triggered Interrupt Register (at 0xe000ef00, write-only)",
+      "purpose": "Provides a mechanism for software to generate an interrupt\n\nINTID, bits [8:0] - Indicates the interrupt to be triggered"
     },
     "SPI0.CONFIG": {
       "long_name": "SPI0.CONFIG (at 0x40003554, read-write)",
@@ -4657,21 +4698,21 @@
       "long_name": "SWI5.UNUSED (at 0x40019000, read-only)",
       "purpose": "Unused."
     },
-    "SysTick.CALIB": {
-      "long_name": "SysTick.CALIB (at 0xe000e01c, read-only)",
-      "purpose": "SysTick Calibration Register\n\nNOREF, bits [31:32] - NOREF\nSKEW, bits [30:31]  - SKEW\nTENMS, bits [0:24]  - TENMS"
+    "SYSTICK.SYST_CALIB": {
+      "long_name": "SysTick Calibration value Register (at 0xe000e01c, read-only)",
+      "purpose": "Reads the calibration value and parameters for SysTick\n\nNOREF, bit [31]    - Indicates whether the IMPLEMENTATION DEFINED reference\n                     clock is implemented\nSKEW, bit [30]     - Indicates whether the 10ms calibration value is exact\nTENMS, bits [23:0] - Optionally, holds a reload value to be used for 10ms\n                     (100Hz) timing, subject to system clock skew errors"
     },
-    "SysTick.CTRL": {
-      "long_name": "SysTick.CTRL (at 0xe000e010, read-write)",
-      "purpose": "SysTick Control and Status Register\n\nCOUNTFLAG, bits [16:17] - COUNTFLAG\nCLKSOURCE, bits [2:3]   - CLKSOURCE\nTICKINT, bits [1:2]     - TICKINT\nENABLE, bits [0:1]      - ENABLE"
+    "SYSTICK.SYST_CSR": {
+      "long_name": "SysTick Control and Status Register (at 0xe000e010, read-write)",
+      "purpose": "Controls the system timer and provides status data\n\nCOUNTFLAG, bit [16] - Indicates whether the counter has counted to 0 since the\n                      last read of this register\nCLKSOURCE, bit [2]  - Indicates the SysTick clock source\nTICKINT, bit [1]    - Indicates whether counting to 0 causes the status of the\n                      SysTick exception to change to pending\nENABLE, bit [0]     - Indicates the enabled status of the SysTick counter"
     },
-    "SysTick.LOAD": {
-      "long_name": "SysTick.LOAD (at 0xe000e014, read-write)",
-      "purpose": "SysTick Reload Value Register\n\nRELOAD, bits [0:24] - RELOAD"
+    "SYSTICK.SYST_CVR": {
+      "long_name": "SysTick Current Value Register (at 0xe000e018, read-write)",
+      "purpose": "Reads or clears the current counter value\n\nCURRENT, bits [31:0] - Current counter value"
     },
-    "SysTick.VAL": {
-      "long_name": "SysTick.VAL (at 0xe000e018, read-write)",
-      "purpose": "SysTick Current Value Register\n\nCURRENT, bits [0:24] - CURRENT"
+    "SYSTICK.SYST_RVR": {
+      "long_name": "SysTick Reload Value Register (at 0xe000e014, read-write)",
+      "purpose": "Holds the reload value of the SYST_CVR\n\nRELOAD, bits [23:0] - The value to load into the SYST_CVR when the counter\n                      reaches 0"
     },
     "TEMP.A0": {
       "long_name": "TEMP.A0 (at 0x4000c520, read-write)",
@@ -5045,73 +5086,25 @@
       "long_name": "TIMER4.TASKS_STOP (at 0x4001b004, write-only)",
       "purpose": "Stop Timer"
     },
-    "TPI.ACPR": {
-      "long_name": "TPI.ACPR (at 0xe0040010, read-write)",
-      "purpose": "Asynchronous Clock Prescaler Register\n\nPRESCALER, bits [0:13] - PRESCALER"
+    "TPIU.TPIU_ACPR": {
+      "long_name": "Asynchronous Clock Prescaler Register (at 0xe0040010, read-write)",
+      "purpose": "Defines a prescaler value for the baud rate of the Serial Wire Output (SWO)\n\nSWOSCALER, bits [15:0] - SWO baud rate prescaler value"
     },
-    "TPI.CLAIMCLR": {
-      "long_name": "TPI.CLAIMCLR (at 0xe0040fa4, read-write)",
-      "purpose": "Claim tag clear"
+    "TPIU.TPIU_CSPSR": {
+      "long_name": "Current Parallel Port Size Register (at 0xe0040004, read-write)",
+      "purpose": "Defines the width of the current parallel trace port\n\nCWIDTH[31:0], bits [31:0] - CWIDTH[N] represents a trace port width of (N+1)"
     },
-    "TPI.CLAIMSET": {
-      "long_name": "TPI.CLAIMSET (at 0xe0040fa0, read-write)",
-      "purpose": "Claim tag set"
+    "TPIU.TPIU_SPPR": {
+      "long_name": "Selected Pin Protocol Register (at 0xe00400f0, read-write)",
+      "purpose": "Selects the protocol used for trace output\n\nTXMODE, bits [1:0] - Specifies the protocol for trace output from the TPIU; 0\n                     for None (Parallel trace port mode), 1 for None\n                     (Asynchronous SWO, using Manchester encoding), 10 for None\n                     (Asynchronous SWO, using NRZ encoding)"
     },
-    "TPI.CSPSR": {
-      "long_name": "TPI.CSPSR (at 0xe0040004, read-write)",
-      "purpose": "Current Parallel Port Size Register"
+    "TPIU.TPIU_SSPSR": {
+      "long_name": "Supported Parallel Port Sizes Register (at 0xe0040000, read-only)",
+      "purpose": "Indicates the supported parallel trace port sizes\n\nSWIDTH[31:0], bits [31:0] - SWIDTH[N] represents a trace port width of (N+1)"
     },
-    "TPI.DEVID": {
-      "long_name": "TPI.DEVID (at 0xe0040fc8, read-only)",
-      "purpose": "TPIU_DEVID\n\nNRZVALID, bits [11:12]   - NRZVALID\nMANCVALID, bits [10:11]  - MANCVALID\nPTINVALID, bits [9:10]   - PTINVALID\nMinBufSz, bits [6:9]     - MinBufSz\nAsynClkIn, bits [5:6]    - AsynClkIn\nNrTraceInput, bits [0:5] - NrTraceInput"
-    },
-    "TPI.DEVTYPE": {
-      "long_name": "TPI.DEVTYPE (at 0xe0040fcc, read-only)",
-      "purpose": "TPIU_DEVTYPE\n\nMajorType, bits [4:8] - MajorType\nSubType, bits [0:4]   - SubType"
-    },
-    "TPI.FFCR": {
-      "long_name": "TPI.FFCR (at 0xe0040304, read-write)",
-      "purpose": "Formatter and Flush Control Register\n\nTrigIn, bits [8:9]  - TrigIn\nEnFCont, bits [1:2] - EnFCont"
-    },
-    "TPI.FFSR": {
-      "long_name": "TPI.FFSR (at 0xe0040300, read-only)",
-      "purpose": "Formatter and Flush Status Register\n\nFtNonStop, bits [3:4] - FtNonStop\nTCPresent, bits [2:3] - TCPresent\nFtStopped, bits [1:2] - FtStopped\nFlInProg, bits [0:1]  - FlInProg"
-    },
-    "TPI.FIFO0": {
-      "long_name": "TPI.FIFO0 (at 0xe0040eec, read-only)",
-      "purpose": "Integration ETM Data\n\nITM_ATVALID, bits [29:31]   - ITM_ATVALID\nITM_bytecount, bits [27:29] - ITM_bytecount\nETM_ATVALID, bits [26:28]   - ETM_ATVALID\nETM_bytecount, bits [24:26] - ETM_bytecount\nETM2, bits [16:24]          - ETM2\nETM1, bits [8:16]           - ETM1\nETM0, bits [0:8]            - ETM0"
-    },
-    "TPI.FIFO1": {
-      "long_name": "TPI.FIFO1 (at 0xe0040efc, read-only)",
-      "purpose": "Integration ITM Data\n\nITM_ATVALID, bits [29:31]   - ITM_ATVALID\nITM_bytecount, bits [27:29] - ITM_bytecount\nETM_ATVALID, bits [26:28]   - ETM_ATVALID\nETM_bytecount, bits [24:26] - ETM_bytecount\nITM2, bits [16:24]          - ITM2\nITM1, bits [8:16]           - ITM1\nITM0, bits [0:8]            - ITM0"
-    },
-    "TPI.FSCR": {
-      "long_name": "TPI.FSCR (at 0xe0040308, read-only)",
-      "purpose": "Formatter Synchronization Counter Register"
-    },
-    "TPI.ITATBCTR0": {
-      "long_name": "TPI.ITATBCTR0 (at 0xe0040ef8, read-only)",
-      "purpose": "ITATBCTR0\n\nATREADY, bits [0:1] - ATREADY"
-    },
-    "TPI.ITATBCTR2": {
-      "long_name": "TPI.ITATBCTR2 (at 0xe0040ef0, read-only)",
-      "purpose": "ITATBCTR2\n\nATREADY, bits [0:1] - ATREADY"
-    },
-    "TPI.ITCTRL": {
-      "long_name": "TPI.ITCTRL (at 0xe0040f00, read-write)",
-      "purpose": "Integration Mode Control\n\nMode, bits [0:1] - Mode"
-    },
-    "TPI.SPPR": {
-      "long_name": "TPI.SPPR (at 0xe00400f0, read-write)",
-      "purpose": "Selected Pin Protocol Register\n\nTXMODE, bits [0:2] - TXMODE"
-    },
-    "TPI.SSPSR": {
-      "long_name": "TPI.SSPSR (at 0xe0040000, read-write)",
-      "purpose": "Supported Parallel Port Size Register"
-    },
-    "TPI.TRIGGER": {
-      "long_name": "TPI.TRIGGER (at 0xe0040ee8, read-only)",
-      "purpose": "TRIGGER\n\nTRIGGER, bits [0:1] - TRIGGER"
+    "TPIU.TPIU_TYPE": {
+      "long_name": "TPIU Type register (at 0xe0040f00, read-only)",
+      "purpose": "Defines the SWO options supported by the TPIU\n\nNRZVALID, bit [11]  - Indicates support for SWO using UART/NRZ encoding\nMANCVALID, bit [10] - Indicates support for SWO using Manchester encoding\nPTINVALID, bit [9]  - Indicates support for parallel trace port operation\nFIFOSZ, bits [8:6]  - Indicates the minimum implemented size of the TPIU output\n                      FIFO for trace data"
     },
     "TWI0.ADDRESS": {
       "long_name": "TWI0.ADDRESS (at 0x40003588, read-write)",
@@ -6072,6 +6065,10 @@
     "WDT.TASKS_START": {
       "long_name": "WDT.TASKS_START (at 0x40010000, write-only)",
       "purpose": "Start the watchdog"
+    },
+    "XPSR": {
+      "long_name": "Program status register (XPSR)",
+      "purpose": "N, bit [31]                   - Negative flag\nZ, bit [30]                   - Zero flag\nC, bit [29]                   - Carry flag\nV, bit [28]                   - Overflow flag\nQ, bit [27]                   - DSP overflow and saturation flag\nT, bit [24]                   - Thumb state bit\nICI/IT HighBits, bits [25:26] - Interruptible-continuable instruction bits (high\n                                bits)\nICI/IT LowBits, bits [10:15]  - Interruptible-continuable instruction bits (low\n                                bits)\nISR Number, bits [0:8]        - Interrupt service routine number"
     }
   }
 }
